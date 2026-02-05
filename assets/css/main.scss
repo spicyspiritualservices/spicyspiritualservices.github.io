@@ -181,3 +181,9 @@ body::before {
   pointer-events: none;
   z-index: 0;
 }
+html {
+  background: linear-gradient(135deg, #c7d8ff, #d9c7ff) !important;
+  background-attachment: fixed !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
