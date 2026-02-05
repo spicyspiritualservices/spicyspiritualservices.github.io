@@ -1,5 +1,3 @@
-layout: none
-
 <div class="homepage-wrapper">
 
   <div style="text-align: center; padding: 40px 20px;">
