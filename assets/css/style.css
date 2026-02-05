@@ -1,0 +1,75 @@
+/* --- CELESTIAL BUTTONS --- */
+.celestial-btn {
+  background: #000;
+  color: #d4af37;
+  padding: 12px 28px;
+  border-radius: 6px;
+  border: 2px solid #000;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.2s ease;
+}
+
+.celestial-btn.light {
+  background: #fff;
+  color: #000;
+  border: 2px solid #d4af37;
+}
+
+.celestial-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* --- SOCIAL BUTTONS --- */
+.social-btn {
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.2s ease;
+}
+
+.social-btn.dark {
+  background: #000;
+  color: #d4af37;
+  border: 2px solid #000;
+}
+
+.social-btn.light {
+  background: #fff;
+  color: #000;
+  border: 2px solid #d4af37;
+}
+
+.social-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* --- REVIEW CARDS --- */
+.review-card {
+  background: #fff;
+  border: 2px solid #d4af37;
+  border-radius: 12px;
+  padding: 22px;
+  max-width: 650px;
+  margin: 0 auto 25px;
+  text-align: left;
+  color: #333;
+}
+
+/* --- SECTION HEADERS --- */
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.section-subtitle {
+  max-width: 650px;
+  margin: 0 auto 40px;
+  color: #555;
+}
