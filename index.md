@@ -1,5 +1,5 @@
 ---
-layout: blank
+layout: home
 title: Home
 ---
 <div class="homepage-wrapper">
