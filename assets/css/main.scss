@@ -194,3 +194,9 @@ html {
   background-repeat: no-repeat !important;
   background-size: cover !important;
 }
+.page-content,
+.site-content,
+body > div,
+body > main {
+  background: linear-gradient(135deg, #c7d8ff, #d9c7ff) !important;
+}
