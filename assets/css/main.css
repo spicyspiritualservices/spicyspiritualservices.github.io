@@ -217,12 +217,12 @@ html::after {
   box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
-/* SOFT DARK OVERLAY (keeps lavender + baby blue visible) */
-html::after {
+/* SOFT DARK OVERLAY ABOVE SKY, BELOW CONTENT */
+body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.12); /* 12% darkness — very gentle */
+  background: rgba(0, 0, 0, 0.18); /* gentle dimming */
   pointer-events: none;
-  z-index: 0;
+  z-index: 1;
 }
