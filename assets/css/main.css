@@ -251,11 +251,10 @@ body::before {
   backdrop-filter: blur(4px);
 }
 
-/* DRIFTING STORM CLOUDS — NEW TEXTURE */
 .clouds {
   position: fixed;
   inset: 0;
-  background: url('https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=1200&q=60');
+  background: url('https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1200&q=60');
   background-size: cover;
   opacity: 0.22;
   animation: drift 60s linear infinite;
@@ -266,6 +265,7 @@ body::before {
 @keyframes drift {
   from { transform: translateX(0); }
   to { transform: translateX(-300px); }
+}
 
 /* CONSTELLATION BACKGROUND LAYER */
 .constellations {
