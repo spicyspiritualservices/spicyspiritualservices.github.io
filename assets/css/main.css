@@ -217,12 +217,13 @@ html::after {
   box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
-/* DARK TRANSPARENT OVERLAY */
+/* SOFT DARK OVERLAY (gentle dimming) */
 html::after {
   content: "";
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.35); /* adjust 0.45 → darker or lighter */
+  background: rgba(0, 0, 0, 0.18); /* 18% darkness — subtle, not heavy */
   pointer-events: none;
   z-index: 0;
 }
+
