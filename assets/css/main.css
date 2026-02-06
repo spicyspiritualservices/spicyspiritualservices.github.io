@@ -7,6 +7,68 @@ body {
   color: #000;
 }
 
+/* SUBTLE AURORA */
+html::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+
+  background: radial-gradient(
+      circle at 10% 30%,
+      rgba(160, 220, 255, 0.25),
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(200, 180, 255, 0.25),
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(255, 200, 255, 0.18),
+      transparent 70%
+    );
+
+  animation: auroraFlow 28s infinite ease-in-out alternate;
+  filter: blur(70px);
+  opacity: 0.45;
+}
+
+@keyframes auroraFlow {
+  0% {
+    transform: translateY(0px) translateX(0px) scale(1);
+    opacity: 0.25;
+  }
+  50% {
+    transform: translateY(-40px) translateX(25px) scale(1.08);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(10px) translateX(-10px) scale(0.98);
+    opacity: 0.3;
+  }
+}
+
+/* SHOOTING STAR */
+@keyframes shootingStar {
+  0% {
+    opacity: 0;
+    transform: translate(-200px, -200px) rotate(45deg);
+  }
+  10% {
+    opacity: 1;
+  }
+  50% {
+    transform: translate(600px, 600px) rotate(45deg);
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 /* TWINKLING STARFIELD */
 body::before {
   content: "";
@@ -56,6 +118,56 @@ body::after {
   100% { opacity: 0.35; transform: scale(0.97); }
 }
 
+/* GOLD SPARKLES */
+body::before,
+body::after,
+html::before {
+  z-index: -1;
+}
+
+body::after {
+  background-image:
+    radial-gradient(circle, rgba(255,215,130,0.9) 0%, rgba(255,215,130,0) 60%),
+    radial-gradient(circle, rgba(255,215,130,0.8) 0%, rgba(255,215,130,0) 70%),
+    radial-gradient(circle, rgba(255,215,130,0.7) 0%, rgba(255,215,130,0) 80%);
+  background-size: 180px 180px, 260px 260px, 340px 340px;
+  background-position:
+    15% 40%,
+    60% 20%,
+    80% 75%;
+  animation: goldPulse 10s infinite ease-in-out alternate;
+}
+
+@keyframes goldPulse {
+  0%   { opacity: 0.2; transform: scale(1); }
+  50%  { opacity: 0.5; transform: scale(1.05); }
+  100% { opacity: 0.3; transform: scale(0.97); }
+}
+
+/* MOON GLYPH */
+.moon {
+  position: fixed;
+  top: 8%;
+  right: 6%;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, white 40%, rgba(255,255,255,0) 70%);
+  box-shadow: 0 0 40px rgba(255,255,255,0.4);
+  filter: blur(1px);
+  pointer-events: none;
+  z-index: 3;
+}
+
+.moon::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: #c7d8ff;
+  transform: translate(20px, 0);
+}
+
 /* Navigation */
 .nav {
   display: flex;
@@ -79,48 +191,4 @@ body::after {
   max-width: 400px;
   margin: 40px auto;
   box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-}
-
-/* SUBTLE AURORA */
-html::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: -1;
-
-  background: radial-gradient(
-      circle at 10% 30%,
-      rgba(160, 220, 255, 0.25),
-      transparent 60%
-    ),
-    radial-gradient(
-      circle at 80% 20%,
-      rgba(200, 180, 255, 0.25),
-      transparent 60%
-    ),
-    radial-gradient(
-      circle at 50% 50%,
-      rgba(255, 200, 255, 0.18),
-      transparent 70%
-    );
-
-  animation: auroraFlow 28s infinite ease-in-out alternate;
-  filter: blur(70px);
-  opacity: 0.45;
-}
-
-@keyframes auroraFlow {
-  0% {
-    transform: translateY(0px) translateX(0px) scale(1);
-    opacity: 0.25;
-  }
-  50% {
-    transform: translateY(-40px) translateX(25px) scale(1.08);
-    opacity: 0.4;
-  }
-  100% {
-    transform: translateY(10px) translateX(-10px) scale(0.98);
-    opacity: 0.3;
-  }
 }
