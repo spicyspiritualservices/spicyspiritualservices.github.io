@@ -90,8 +90,8 @@ html::before {
   z-index: -1;
 
   background: radial-gradient(
-      circle at 20% 80%,
-      rgba(180, 255, 255, 0.25),
+      circle at 10% 30%,
+      rgba(160, 220, 255, 0.25),
       transparent 60%
     ),
     radial-gradient(
@@ -105,9 +105,9 @@ html::before {
       transparent 70%
     );
 
-  animation: auroraFlow 18s infinite ease-in-out alternate;
-  filter: blur(40px);
-  opacity: 0.35;
+  animation: auroraFlow 28s infinite ease-in-out alternate;
+  filter: blur(70px);
+  opacity: 0.45;
 }
 
 @keyframes auroraFlow {
@@ -116,7 +116,7 @@ html::before {
     opacity: 0.25;
   }
   50% {
-    transform: translateY(-20px) translateX(15px) scale(1.05);
+    transform: translateY(-40px) translateX(25px) scale(1.08);
     opacity: 0.4;
   }
   100% {
