@@ -217,12 +217,13 @@ html::after {
   box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
-/* SOFT DARK OVERLAY ABOVE SKY, BELOW CONTENT */
+/* SOFT DARK OVERLAY THAT DOESN'T KILL THE COLORS */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.18); /* gentle dimming */
+  background: rgba(0, 0, 0, 0.15); /* gentle dimming, keeps lavender + baby blue */
   pointer-events: none;
-  z-index: 1;
+  z-index: 0;
 }
+
