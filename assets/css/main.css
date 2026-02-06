@@ -7,19 +7,25 @@ body {
   color: #000;
 }
 
-/* Sparkles */
+/* TWINKLING STARFIELD */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background-image:
-    radial-gradient(white 1px, transparent 2px),
-    radial-gradient(white 1px, transparent 2px),
-    radial-gradient(white 1px, transparent 2px);
-  background-size: 200px 200px, 300px 300px, 400px 400px;
-  background-position: 0 0, 50px 80px, 120px 200px;
-  opacity: 0.35;
   pointer-events: none;
+  background:
+    radial-gradient(white 1px, transparent 1px) 0 0,
+    radial-gradient(white 1px, transparent 1px) 50px 80px,
+    radial-gradient(white 1px, transparent 1px) 120px 200px;
+  background-size: 200px 200px, 300px 300px, 400px 400px;
+  opacity: 0.6;
+  animation: twinkle 6s infinite ease-in-out alternate;
+}
+
+@keyframes twinkle {
+  0%   { opacity: 0.2; transform: scale(1); }
+  50%  { opacity: 0.6; transform: scale(1.02); }
+  100% { opacity: 0.3; transform: scale(0.98); }
 }
 
 /* Navigation */
