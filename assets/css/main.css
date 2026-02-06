@@ -222,7 +222,7 @@ html::after {
   content: "";
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.18); /* 18% darkness — subtle, not heavy */
+  background: rgba(0, 0, 0, 0.12); /* 12% darkness — subtle, not heavy */
   pointer-events: none;
   z-index: 0;
 }
