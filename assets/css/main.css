@@ -231,16 +231,6 @@ html::after {
   box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
-/* SOFT DARK OVERLAY THAT DOESN'T KILL THE COLORS */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.25); /* gentle dimming, keeps lavender + baby blue */
-  pointer-events: none;
-  z-index: 0;
-}
-
 .about-photo img {
   display: block;
   max-width: 260px;
