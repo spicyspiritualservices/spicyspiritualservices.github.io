@@ -28,6 +28,34 @@ body::before {
   100% { opacity: 0.3; transform: scale(0.98); }
 }
 
+/* LARGE GLOWING STARS */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+
+  background-image:
+    radial-gradient(circle, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0) 60%),
+    radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%),
+    radial-gradient(circle, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0) 80%);
+
+  background-size: 250px 250px, 400px 400px, 600px 600px;
+  background-position:
+    20% 30%,
+    70% 60%,
+    40% 80%;
+
+  opacity: 0.45;
+  animation: glowpulse 8s infinite ease-in-out alternate;
+}
+
+@keyframes glowpulse {
+  0%   { opacity: 0.25; transform: scale(1); }
+  50%  { opacity: 0.55; transform: scale(1.03); }
+  100% { opacity: 0.35; transform: scale(0.97); }
+}
+
 /* Navigation */
 .nav {
   display: flex;
