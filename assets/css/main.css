@@ -94,7 +94,7 @@ html::after {
   background-size: 400% 400%;
   mix-blend-mode: screen;
   animation: iridescentShift 22s ease-in-out infinite;
-  opacity: 0.12;
+  opacity: 0.08;
 }
 
 @keyframes iridescentShift {
