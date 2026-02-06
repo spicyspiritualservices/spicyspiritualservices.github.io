@@ -216,3 +216,41 @@ html::after {
   margin: 40px auto;
   box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
+
+/* DARK OVERLAY */
+body::marker,
+html::marker {
+  content: none;
+}
+
+body::after,
+html::before,
+html::after {
+  z-index: -2;
+}
+
+body::overlay,
+html::overlay {
+  content: none;
+}
+
+body::before,
+body::after,
+html::before,
+html::after {
+  pointer-events: none;
+}
+
+html::marker {
+  content: none;
+}
+
+/* THE ACTUAL OVERLAY */
+body::overlay {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35); /* adjust darkness here */
+  pointer-events: none;
+  z-index: 0;
+}
