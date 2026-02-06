@@ -1,1 +1,48 @@
+/* Full-page gradient */
+body {
+  margin: 0;
+  font-family: "Georgia", serif;
+  background: linear-gradient(135deg, #c7d8ff, #d9c7ff);
+  background-attachment: fixed;
+  color: #000;
+}
 
+/* Sparkles */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    radial-gradient(white 1px, transparent 1px),
+    radial-gradient(white 1px, transparent 1px),
+    radial-gradient(white 1px, transparent 1px);
+  background-size: 3px 3px, 4px 4px, 5px 5px;
+  background-position: 0 0, 20px 30px, 50px 60px;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  font-weight: bold;
+}
+
+/* Hero section */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+/* Card */
+.card {
+  background: #6a4bc3;
+  color: white;
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 400px;
+  margin: 40px auto;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
