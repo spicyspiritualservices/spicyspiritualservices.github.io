@@ -250,3 +250,31 @@ body::before {
   border: 1px solid rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(4px);
 }
+
+/* DRIFTING STORM CLOUDS */
+.clouds {
+  position: fixed;
+  inset: 0;
+  background: url('https://i.imgur.com/8yKQF5L.png'); /* soft gray cloud texture */
+  background-size: cover;
+  opacity: 0.25; /* subtle, not overpowering */
+  animation: drift 60s linear infinite;
+  z-index: 0; /* sits under stars */
+  pointer-events: none;
+}
+
+@keyframes drift {
+  from { transform: translateX(0); }
+  to { transform: translateX(-300px); }
+}
+
+/* CONSTELLATION BACKGROUND LAYER */
+.constellations {
+  position: fixed;
+  inset: 0;
+  background: url('https://i.imgur.com/1Jg7YkS.png'); /* faint constellation map */
+  background-size: cover;
+  opacity: 0.12; /* barely there, mystical */
+  z-index: -1; /* sits behind clouds + aurora */
+  pointer-events: none;
+}
