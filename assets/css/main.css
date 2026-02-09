@@ -314,3 +314,55 @@ html::after {
   from { transform: translateX(0); }
   to   { transform: translateX(-80px); }
 }
+
+.about-section {
+  padding: 100px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 3; /* keeps it above the sky layers */
+}
+
+.about-container {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.about-photo img {
+  width: 340px;
+  border-radius: 16px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.35);
+  border: 1px solid rgba(255,255,255,0.25);
+  backdrop-filter: blur(4px);
+}
+
+.about-text {
+  flex: 1;
+  max-width: 650px;
+  color: #fff;
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
+.about-text h2 {
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.about-text h3 {
+  margin-top: 40px;
+  font-size: 1.6rem;
+  color: #ffe7ff;
+}
+
+.about-text ul {
+  margin: 20px 0;
+  padding-left: 20px;
+}
+
+.about-text ul li {
+  margin-bottom: 10px;
+}
