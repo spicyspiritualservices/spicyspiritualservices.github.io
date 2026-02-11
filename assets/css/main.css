@@ -262,7 +262,7 @@ html::after {
 .hero-title {
   font-size: 3rem;
   font-weight: 600;
-  color: #ffffff;
+  color: #2b2b2b;
   text-shadow: 0 0 12px rgba(255,255,255,0.25);
 }
 
@@ -275,7 +275,7 @@ html::after {
   font-size: 1.4rem;
   max-width: 700px;
   margin: 0 auto;
-  color: #ffffff;
+  color: #2b2b2b;
   opacity: 0.9;
   line-height: 1.6;
   font-weight: 300;
@@ -290,13 +290,13 @@ html::after {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 2rem;
-  color: #ffffff;
+  color: #2b2b2b;
   font-weight: 500;
   text-shadow: 0 0 8px rgba(255,255,255,0.2);
 }
 
 .body-text {
-  color: #eaeaea;
+  color: #2b2b2b;
   line-height: 1.7;
   margin-bottom: 1.5rem;
   font-weight: 300;
@@ -304,7 +304,7 @@ html::after {
 
 .body-text.emphasis {
   font-weight: 400;
-  color: #ffffff;
+  color: #2b2b2b;
 }
 
 /* -------------------------------------------------- */
@@ -327,13 +327,13 @@ html::after {
 }
 
 .review-text {
-  color: #ffffff;
+  color: #2b2b2b;
   font-weight: 300;
   line-height: 1.6;
 }
 
 .glow-link {
-  color: #ffffff;
+  color: #2b2b2b;
   text-decoration: none;
   font-weight: 300;
   opacity: 0.85;
@@ -359,7 +359,7 @@ html::after {
   padding: 0.9rem 2rem;
   background: rgba(255,255,255,0.15);
   border-radius: 8px;
-  color: #ffffff;
+  color: #2b2b2b;
   text-decoration: none;
   font-weight: 400;
   backdrop-filter: blur(6px);
