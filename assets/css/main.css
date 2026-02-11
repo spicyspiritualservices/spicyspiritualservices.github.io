@@ -341,7 +341,7 @@ html::after {
 .about-text {
   flex: 1;
   max-width: 650px;
-  color: #fff;
+  color: #2b2b2b;
   line-height: 1.7;
   font-size: 1.1rem;
 }
@@ -349,13 +349,13 @@ html::after {
 .about-text h2 {
   font-size: 2.4rem;
   margin-bottom: 20px;
-  color: #fff;
+  color: #2b2b2b;
 }
 
 .about-text h3 {
   margin-top: 40px;
   font-size: 1.6rem;
-  color: #ffe7ff;
+  color: #2b2b2b;
 }
 
 .about-text ul {
