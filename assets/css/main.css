@@ -1,12 +1,15 @@
-/* FULL-PAGE GRADIENT */
+/* -------------------------------------------------- */
+/* GLOBAL BASE + BACKGROUND SKY                       */
+/* -------------------------------------------------- */
+
 body {
   margin: 0;
   font-family: "Georgia", serif;
   background: linear-gradient(135deg, #6a78a0, #7a68a0);
   background-attachment: fixed;
   color: #2b2b2b;
-   text-shadow: 0 0 6px rgba(255,255,255,0.55);
-   text-shadow: 0 0 10px rgba(255,255,255,0.35);
+  text-shadow: 0 0 6px rgba(255,255,255,0.55),
+               0 0 10px rgba(255,255,255,0.35);
 }
 
 /* TWINKLING STARFIELD */
@@ -36,16 +39,12 @@ body::after {
   position: fixed;
   inset: 0;
   pointer-events: none;
-
   background-image:
     radial-gradient(circle, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0) 60%),
     radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%),
     radial-gradient(circle, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0) 80%);
   background-size: 250px 250px, 400px 400px, 600px 600px;
-  background-position:
-    20% 30%,
-    70% 60%,
-    40% 80%;
+  background-position: 20% 30%, 70% 60%, 40% 80%;
   opacity: 0.45;
   animation: glowpulse 8s infinite ease-in-out alternate;
 }
@@ -56,24 +55,24 @@ body::after {
   100% { opacity: 0.35; transform: scale(0.97); }
 }
 
-/* SUBTLE AURORA */
+/* AURORA */
 html::before {
   content: "";
   position: fixed;
   inset: 0;
   pointer-events: none;
   z-index: -1;
-
-  background: radial-gradient(circle at 20% 80%, rgba(180,255,255,0.25), transparent 60%),
-              radial-gradient(circle at 80% 20%, rgba(200,180,255,0.25), transparent 60%),
-              radial-gradient(circle at 50% 50%, rgba(255,200,255,0.18), transparent 70%);
+  background:
+    radial-gradient(circle at 20% 80%, rgba(180,255,255,0.25), transparent 60%),
+    radial-gradient(circle at 80% 20%, rgba(200,180,255,0.25), transparent 60%),
+    radial-gradient(circle at 50% 50%, rgba(255,200,255,0.18), transparent 70%);
   animation: auroraFlow 38s infinite ease-in-out alternate;
   filter: blur(18px);
   opacity: 0.28;
 }
 
 @keyframes auroraFlow {
-  0%   { transform: translateY(0px) translateX(0px) scale(1); }
+  0%   { transform: translateY(0) translateX(0) scale(1); }
   50%  { transform: translateY(-40px) translateX(25px) scale(1.08); }
   100% { transform: translateY(10px) translateX(-10px) scale(0.98); }
 }
@@ -85,7 +84,6 @@ html::after {
   inset: 0;
   pointer-events: none;
   z-index: -1;
-
   background: linear-gradient(
     120deg,
     rgba(255,200,255,0.15),
@@ -106,66 +104,82 @@ html::after {
 }
 
 /* SHOOTING STAR */
-@keyframes shootingStar {
-  0%   { opacity: 0; transform: translate(-200px, -200px) rotate(45deg); }
-  10%  { opacity: 1; }
-  50%  { transform: translate(600px, 600px) rotate(45deg); opacity: 0.8; }
-  100% { opacity: 0; }
-}
-
 .shooting-star {
   position: fixed;
   top: -20px;
   left: -20px;
-  width: 4px;              /* tiny bright point */
+  width: 4px;
   height: 4px;
   background: white;
-  border-radius: 50%;      /* makes it a dot */
-  box-shadow: 0 0 12px 6px rgba(255, 255, 255, 0.8); /* glow */
+  border-radius: 50%;
+  box-shadow: 0 0 12px 6px rgba(255,255,255,0.8);
   animation: shoot 4s linear infinite;
   z-index: 2;
 }
 
 @keyframes shoot {
-  0% {
-    transform: translate(0, 0) scale(1);
-    opacity: 1;
-  }
-  70% {
-    transform: translate(600px, 300px) scale(0.8);
-    opacity: 0.9;
-  }
-  100% {
-    transform: translate(900px, 450px) scale(0.2);
-    opacity: 0;
-  }
+  0%   { transform: translate(0,0) scale(1); opacity: 1; }
+  70%  { transform: translate(600px,300px) scale(0.8); opacity: 0.9; }
+  100% { transform: translate(900px,450px) scale(0.2); opacity: 0; }
 }
 
-/* CONSTELLATION LINES */
-.constellation {
+/* CLOUDS */
+.clouds {
   position: fixed;
-  top: 30%;
-  left: 20%;
-  width: 300px;
-  height: 300px;
+  inset: 0;
+  background:
+    radial-gradient(circle at 30% 40%, rgba(255,255,255,0.15), rgba(0,0,0,0.4)),
+    radial-gradient(circle at 70% 60%, rgba(255,255,255,0.1), rgba(0,0,0,0.5));
+  filter: blur(8px);
+  opacity: 0.11;
+  animation: drift 60s linear infinite;
+  z-index: 0;
   pointer-events: none;
+}
+
+@keyframes drift {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-300px); }
+}
+
+/* CONSTELLATIONS */
+.constellations {
+  position: fixed;
+  inset: 0;
   z-index: 1;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 10% 20%, rgba(255,255,255,1) 3px, transparent 4px),
+    radial-gradient(circle at 30% 70%, rgba(255,255,255,0.9) 3px, transparent 4px),
+    radial-gradient(circle at 60% 40%, rgba(255,255,255,0.95) 3px, transparent 4px),
+    radial-gradient(circle at 80% 80%, rgba(255,255,255,0.85) 3px, transparent 4px),
+    radial-gradient(circle at 50% 90%, rgba(255,255,255,0.9) 3px, transparent 4px),
+    radial-gradient(circle at 90% 30%, rgba(255,255,255,0.95) 3px, transparent 4px);
+  opacity: 0.9;
+  filter: drop-shadow(0 0 4px rgba(255,255,255,0.6));
 }
 
-.constellation svg line {
-  stroke: rgba(255,255,255,0.25);
-  stroke-width: 1px;
-  stroke-linecap: round;
-  animation: constellationGlow 6s infinite ease-in-out alternate;
+.constellations::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 15% 25%, rgba(255,255,255,0.18) 2px, transparent 3px),
+    radial-gradient(circle at 75% 65%, rgba(255,255,255,0.15) 2px, transparent 3px),
+    radial-gradient(circle at 40% 80%, rgba(255,255,255,0.12) 2px, transparent 3px),
+    radial-gradient(circle at 85% 30%, rgba(255,255,255,0.16) 2px, transparent 3px);
+  opacity: 0.35;
+  filter: blur(2px);
+  animation: deepStars 120s linear infinite;
 }
 
-@keyframes constellationGlow {
-  0% { opacity: 0.2; }
-  50% { opacity: 0.5; }
-  100% { opacity: 0.25; }
+@keyframes deepStars {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-80px); }
 }
 
-/* MOON GLYPH */
+/* MOON */
 .moon {
   position: fixed;
   top: 8%;
@@ -189,7 +203,10 @@ html::after {
   transform: translate(20px, 0);
 }
 
-/* NAVIGATION BUTTONS */
+/* -------------------------------------------------- */
+/* NAVIGATION                                          */
+/* -------------------------------------------------- */
+
 .nav {
   display: flex;
   gap: 20px;
@@ -199,194 +216,165 @@ html::after {
 .nav a {
   padding: 10px 20px;
   border-radius: 30px;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255,255,255,0.15);
   backdrop-filter: blur(6px);
   color: #2b2b2b;
   text-decoration: none;
   font-weight: 600;
   letter-spacing: 0.5px;
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255,255,255,0.25);
   transition: all 0.3s ease;
   box-shadow: 0 0 10px rgba(255,255,255,0.15);
 }
 
 .nav a:hover {
-  background: rgba(255, 215, 130, 0.35);
-  border-color: rgba(255, 215, 130, 0.6);
+  background: rgba(255,215,130,0.35);
+  border-color: rgba(255,215,130,0.6);
   box-shadow: 0 0 18px rgba(255,215,130,0.5);
   transform: translateY(-2px);
 }
 
-/* HERO SECTION */
-.hero {
-  text-align: center;
-  padding: 80px 20px;
-}
+/* -------------------------------------------------- */
+/* UNIVERSAL PAGE DIVIDER (Homepage + About)           */
+/* -------------------------------------------------- */
 
-/* CARD */
-.card {
-  background: #6a4bc3;
-  color: white;
-  padding: 40px;
-  border-radius: 12px;
-  max-width: 400px;
-  margin: 40px auto;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-}
-
-.about-photo img {
-  display: block;
-  max-width: 260px;
-  margin: 40px auto 20px;
-  border-radius: 14px;
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(4px);
-}
-
-/* PURE CSS DRIFTING STORM CLOUDS */
-.clouds {
-  position: fixed;
-  inset: 0;
-  background: radial-gradient(circle at 30% 40%, rgba(255,255,255,0.15), rgba(0,0,0,0.4)),
-              radial-gradient(circle at 70% 60%, rgba(255,255,255,0.1), rgba(0,0,0,0.5));
-  filter: blur(8px);
-  opacity: 0.11;
-  animation: drift 60s linear infinite;
-  z-index: 0;
-  pointer-events: none;
-}
-
-@keyframes drift {
-  from { transform: translateX(0); }
-  to { transform: translateX(-300px); }
-}
-
-/* CONSTELLATION BACKGROUND LAYER */
-.constellations {
-  position: fixed;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-  background:
-    radial-gradient(circle at 10% 20%, rgba(255,255,255,1) 3px, transparent 4px),
-    radial-gradient(circle at 30% 70%, rgba(255,255,255,0.9) 3px, transparent 4px),
-    radial-gradient(circle at 60% 40%, rgba(255,255,255,0.95) 3px, transparent 4px),
-    radial-gradient(circle at 80% 80%, rgba(255,255,255,0.85) 3px, transparent 4px),
-    radial-gradient(circle at 50% 90%, rgba(255,255,255,0.9) 3px, transparent 4px),
-    radial-gradient(circle at 90% 30%, rgba(255,255,255,0.95) 3px, transparent 4px);
-  opacity: 0.9;
-  filter: drop-shadow(0 0 4px rgba(255,255,255,0.6));
-}
-
-.constellations::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-
-  background:
-    radial-gradient(circle at 15% 25%, rgba(255,255,255,0.15) 2px, transparent 3px),
-    radial-gradient(circle at 75% 65%, rgba(255,255,255,0.12) 2px, transparent 3px),
-    radial-gradient(circle at 40% 80%, rgba(255,255,255,0.10) 2px, transparent 3px),
-    radial-gradient(circle at 85% 30%, rgba(255,255,255,0.14) 2px, transparent 3px);
-  
-  opacity: 0.35;
-  filter: blur(2px);
-}
-
-.constellations::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-
-  background:
-    radial-gradient(circle at 15% 25%, rgba(255,255,255,0.18) 2px, transparent 3px),
-    radial-gradient(circle at 75% 65%, rgba(255,255,255,0.15) 2px, transparent 3px),
-    radial-gradient(circle at 40% 80%, rgba(255,255,255,0.12) 2px, transparent 3px),
-    radial-gradient(circle at 85% 30%, rgba(255,255,255,0.16) 2px, transparent 3px);
-
-  opacity: 0.35;
-  filter: blur(2px);
-  animation: deepStars 120s linear infinite;
-}
-
-@keyframes deepStars {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-80px); }
-}
-
-.about-section {
-  padding: 100px 40px;
-  max-width: 1200px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 3; /* keeps it above the sky layers */
-}
-
-.about-container {
-  display: flex;
-  gap: 60px;
-  align-items: flex-start;
-  flex-wrap: wrap;
-}
-
-.about-photo img {
-  width: 340px;
-  border-radius: 16px;
-  box-shadow: 0 12px 35px rgba(0,0,0,0.35);
-  border: 1px solid rgba(255,255,255,0.25);
-  backdrop-filter: blur(4px);
-}
-
-.about-text {
-  flex: 1;
-  max-width: 650px;
-  color: #2b2b2b;
-  line-height: 1.7;
-  font-size: 1.1rem;
-   text-shadow: 0 0 6px rgba(255,255,255,0.55);
-   text-shadow: 0 0 10px rgba(255,255,255,0.35);
-}
-
-.about-text h2 {
-  font-size: 2.4rem;
-  margin-bottom: 20px;
-  color: #2b2b2b;
-   text-shadow: 0 0 6px rgba(255,255,255,0.55);
-   text-shadow: 0 0 10px rgba(255,255,255,0.35);
-}
-
-.about-text h3 {
-  margin-top: 40px;
-  font-size: 1.6rem;
-  color: #2b2b2b;
-   text-shadow: 0 0 6px rgba(255,255,255,0.55);
-   text-shadow: 0 0 10px rgba(255,255,255,0.35);
-}
-
-.about-text ul {
-  margin: 20px 0;
-  padding-left: 20px;
-   text-shadow: 0 0 6px rgba(255,255,255,0.55);
-   text-shadow: 0 0 10px rgba(255,255,255,0.35);
-}
-
-.about-text ul li {
-  margin-bottom: 10px;
-   text-shadow: 0 0 6px rgba(255,255,255,0.55);
-   text-shadow: 0 0 10px rgba(255,255,255,0.35);
-}
-/* PAGE DIVIDER */
 .page-divider {
   width: 100%;
   height: 1px;
-  background: linear-gradient(to right, transparent, rgba(255,255,255,0.4), transparent);
-  margin: 80px 0 40px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255,255,255,0.4),
+    transparent
+  );
+  margin: 2rem auto 4rem;
 }
 
-/* ABOUT SECTION */
+/* -------------------------------------------------- */
+/* HOMEPAGE: HERO + FLOATING MOMENT                    */
+/* -------------------------------------------------- */
+
+.hero {
+  text-align: center;
+  padding: 6rem 2rem 4rem;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-shadow: 0 0 12px rgba(255,255,255,0.25);
+}
+
+.floating-quote {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.floating-quote-text {
+  font-size: 1.4rem;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #ffffff;
+  opacity: 0.9;
+  line-height: 1.6;
+  font-weight: 300;
+  text-shadow: 0 0 10px rgba(255,255,255,0.2);
+}
+
+/* -------------------------------------------------- */
+/* SECTION TITLES + BODY TEXT                          */
+/* -------------------------------------------------- */
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #ffffff;
+  font-weight: 500;
+  text-shadow: 0 0 8px rgba(255,255,255,0.2);
+}
+
+.body-text {
+  color: #eaeaea;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+}
+
+.body-text.emphasis {
+  font-weight: 400;
+  color: #ffffff;
+}
+
+/* -------------------------------------------------- */
+/* REVIEWS                                             */
+/* -------------------------------------------------- */
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.review-card {
+  background: rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 1.8rem;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 20px rgba(255,255,255,0.08);
+}
+
+.review-text {
+  color: #ffffff;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.glow-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  opacity: 0.85;
+  transition: 0.2s ease;
+}
+
+.glow-link:hover {
+  opacity: 1;
+  text-shadow: 0 0 8px rgba(255,255,255,0.4);
+}
+
+.reviews-more {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+/* -------------------------------------------------- */
+/* CTA BUTTON                                          */
+/* -------------------------------------------------- */
+
+.primary-button {
+  display: inline-block;
+  padding: 0.9rem 2rem;
+  background: rgba(255,255,255,0.15);
+  border-radius: 8px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 400;
+  backdrop-filter: blur(6px);
+  transition: 0.25s ease;
+}
+
+.primary-button:hover {
+  background: rgba(255,255,255,0.25);
+  box-shadow: 0 0 12px rgba(255,255,255,0.3);
+}
+
+/* -------------------------------------------------- */
+/* ABOUT PAGE                                          */
+/* -------------------------------------------------- */
+
 .about-section {
   padding: 100px 40px;
   max-width: 1200px;
@@ -404,7 +392,6 @@ html::after {
   flex-wrap: wrap;
 }
 
-/* PHOTO + GLOW */
 .about-photo {
   position: relative;
 }
@@ -431,11 +418,10 @@ html::after {
   filter: blur(20px);
 }
 
-/* TEXT */
 .about-text {
   flex: 1;
   max-width: 650px;
-  color: #2b2b2b; /* soft charcoal */
+  color: #2b2b2b;
   line-height: 1.7;
   font-size: 1.1rem;
   text-shadow: 0 0 4px rgba(255,255,255,0.45);
@@ -444,23 +430,17 @@ html::after {
 .about-text h2 {
   font-size: 2.4rem;
   margin-bottom: 20px;
-  color: #2b2b2b; /* soft charcoal heading */
+  color: #2b2b2b;
   text-shadow: 0 0 4px rgba(255,255,255,0.45);
 }
 
 .about-text h3 {
   margin-top: 40px;
   font-size: 1.6rem;
-  color: #2b2b2b; /* soft charcoal subheading */
-  tex-shadow: 0 0 4px rgba(255,255,255,0.45);
+  color: #2b2b2b;
+  text-shadow: 0 0 4px rgba(255,255,255,0.45);
 }
 
-.icon {
-  margin-right: 8px;
-  color: #2b2b2b; /* soft charcoal icon */
-}
-
-/* LIST */
 .about-text ul {
   margin: 20px 0;
   padding-left: 20px;
@@ -468,189 +448,12 @@ html::after {
 
 .about-text ul li {
   margin-bottom: 10px;
-  color: #2b2b2b; /* soft charcoal list items */
+  color: #2b2b2b;
 }
 
-
-/* FOOTER */
-.footer {
-  text-align: center;
-  padding: 60px 0;
-  color: rgba(255,255,255,0.6);
-  font-size: 0.9rem;
-}
-
-/* FADE IN */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* -------------------------------- */
-/* GLOBAL SPACING + LAYOUT          */
-/* -------------------------------- */
-
-.section-padded {
-  padding: 5rem 2rem;
-}
-
-.section-inner {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-/* -------------------------------- */
-/* PAGE DIVIDER (celestial line)    */
-/* -------------------------------- */
-
-.page-divider {
-  width: 100%;
-  height: 1px;
-  background: linear-gradient(
-    to right,
-    transparent,
-    rgba(255, 255, 255, 0.4),
-    transparent
-  );
-  margin: 2rem auto 4rem;
-}
-
-/* -------------------------------- */
-/* HERO                             */
-/* -------------------------------- */
-
-.hero {
-  text-align: center;
-  padding: 6rem 2rem 4rem;
-}
-
-.hero-title {
-  font-size: 3rem;
-  font-weight: 600;
-  color: #ffffff;
-  text-shadow: 0 0 12px rgba(255, 255, 255, 0.25);
-}
-
-/* -------------------------------- */
-/* FLOATING MOMENT (PROMISE QUOTE)  */
-/* -------------------------------- */
-
-.floating-quote {
-  text-align: center;
-  padding: 4rem 2rem;
-}
-
-.floating-quote-text {
-  font-size: 1.4rem;
-  max-width: 700px;
-  margin: 0 auto;
-  color: #ffffff;
-  opacity: 0.9;
-  line-height: 1.6;
-  font-weight: 300;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-}
-
-/* -------------------------------- */
-/* SECTION TITLES                   */
-/* -------------------------------- */
-
-.section-title {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  color: #ffffff;
-  font-weight: 500;
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
-}
-
-/* -------------------------------- */
-/* BODY TEXT                        */
-/* -------------------------------- */
-
-.body-text {
-  color: #eaeaea;
-  line-height: 1.7;
-  margin-bottom: 1.5rem;
-  font-weight: 300;
-}
-
-.body-text.emphasis {
-  font-weight: 400;
-  color: #ffffff;
-}
-
-/* -------------------------------- */
-/* REVIEWS GRID                     */
-/* -------------------------------- */
-
-.reviews-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.review-card {
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 12px;
-  padding: 1.8rem;
-  backdrop-filter: blur(6px);
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.08);
-}
-
-.review-text {
-  color: #ffffff;
-  font-weight: 300;
-  line-height: 1.6;
-}
-
-/* -------------------------------- */
-/* GOOGLE LINK                      */
-/* -------------------------------- */
-
-.glow-link {
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 300;
-  opacity: 0.85;
-  transition: 0.2s ease;
-}
-
-.glow-link:hover {
-  opacity: 1;
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
-}
-
-.reviews-more {
-  text-align: center;
-  margin-top: 2.5rem;
-}
-
-/* -------------------------------- */
-/* CTA BUTTON                       */
-/* -------------------------------- */
-
-.primary-button {
-  display: inline-block;
-  padding: 0.9rem 2rem;
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 8px;
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 400;
-  backdrop-filter: blur(6px);
-  transition: 0.25s ease;
-}
-
-.primary-button:hover {
-  background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
-}
-
-/* -------------------------------- */
-/* FOOTER                           */
-/* -------------------------------- */
+/* -------------------------------------------------- */
+/* FOOTER                                              */
+/* -------------------------------------------------- */
 
 .site-footer {
   text-align: center;
@@ -660,3 +463,11 @@ html::after {
   opacity: 0.7;
 }
 
+/* -------------------------------------------------- */
+/* ANIMATIONS                                          */
+/* -------------------------------------------------- */
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
