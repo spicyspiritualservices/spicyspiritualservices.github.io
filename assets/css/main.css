@@ -23,7 +23,7 @@ body::before {
     radial-gradient(white 1px, transparent 1px) 50px 80px,
     radial-gradient(white 1px, transparent 1px) 120px 200px;
   background-size: 200px 200px, 300px 300px, 400px 400px;
-  opacity: 0.6;
+  opacity: 0.36;
   animation: twinkle 6s infinite ease-in-out alternate;
 }
 
@@ -45,7 +45,7 @@ body::after {
     radial-gradient(circle, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0) 80%);
   background-size: 250px 250px, 400px 400px, 600px 600px;
   background-position: 20% 30%, 70% 60%, 40% 80%;
-  opacity: 0.45;
+  opacity: 0.25;
   animation: glowpulse 8s infinite ease-in-out alternate;
 }
 
@@ -67,8 +67,8 @@ html::before {
     radial-gradient(circle at 80% 20%, rgba(200,180,255,0.25), transparent 60%),
     radial-gradient(circle at 50% 50%, rgba(255,200,255,0.18), transparent 70%);
   animation: auroraFlow 38s infinite ease-in-out alternate;
-  filter: blur(18px);
-  opacity: 0.28;
+  filter: blur(14px);
+  opacity: 0.18;
 }
 
 @keyframes auroraFlow {
@@ -94,7 +94,7 @@ html::after {
   background-size: 400% 400%;
   mix-blend-mode: screen;
   animation: iridescentShift 22s ease-in-out infinite;
-  opacity: 0.08;
+  opacity: 0.04;
 }
 
 @keyframes iridescentShift {
@@ -130,8 +130,8 @@ html::after {
   background:
     radial-gradient(circle at 30% 40%, rgba(255,255,255,0.15), rgba(0,0,0,0.4)),
     radial-gradient(circle at 70% 60%, rgba(255,255,255,0.1), rgba(0,0,0,0.5));
-  filter: blur(8px);
-  opacity: 0.11;
+  filter: blur(5px);
+  opacity: 0.06;
   animation: drift 60s linear infinite;
   z-index: 0;
   pointer-events: none;
