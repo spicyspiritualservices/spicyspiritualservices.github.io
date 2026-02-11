@@ -485,3 +485,178 @@ html::after {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+/* -------------------------------- */
+/* GLOBAL SPACING + LAYOUT          */
+/* -------------------------------- */
+
+.section-padded {
+  padding: 5rem 2rem;
+}
+
+.section-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* -------------------------------- */
+/* PAGE DIVIDER (celestial line)    */
+/* -------------------------------- */
+
+.page-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  margin: 2rem auto 4rem;
+}
+
+/* -------------------------------- */
+/* HERO                             */
+/* -------------------------------- */
+
+.hero {
+  text-align: center;
+  padding: 6rem 2rem 4rem;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.25);
+}
+
+/* -------------------------------- */
+/* FLOATING MOMENT (PROMISE QUOTE)  */
+/* -------------------------------- */
+
+.floating-quote {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.floating-quote-text {
+  font-size: 1.4rem;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #ffffff;
+  opacity: 0.9;
+  line-height: 1.6;
+  font-weight: 300;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+/* -------------------------------- */
+/* SECTION TITLES                   */
+/* -------------------------------- */
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #ffffff;
+  font-weight: 500;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+}
+
+/* -------------------------------- */
+/* BODY TEXT                        */
+/* -------------------------------- */
+
+.body-text {
+  color: #eaeaea;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+}
+
+.body-text.emphasis {
+  font-weight: 400;
+  color: #ffffff;
+}
+
+/* -------------------------------- */
+/* REVIEWS GRID                     */
+/* -------------------------------- */
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.review-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 1.8rem;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.08);
+}
+
+.review-text {
+  color: #ffffff;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+/* -------------------------------- */
+/* GOOGLE LINK                      */
+/* -------------------------------- */
+
+.glow-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  opacity: 0.85;
+  transition: 0.2s ease;
+}
+
+.glow-link:hover {
+  opacity: 1;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+.reviews-more {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+/* -------------------------------- */
+/* CTA BUTTON                       */
+/* -------------------------------- */
+
+.primary-button {
+  display: inline-block;
+  padding: 0.9rem 2rem;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 400;
+  backdrop-filter: blur(6px);
+  transition: 0.25s ease;
+}
+
+.primary-button:hover {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
+}
+
+/* -------------------------------- */
+/* FOOTER                           */
+/* -------------------------------- */
+
+.site-footer {
+  text-align: center;
+  padding: 3rem 2rem;
+  color: #cccccc;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
