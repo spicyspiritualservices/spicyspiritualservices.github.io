@@ -972,14 +972,14 @@ footer a:hover,
   z-index: 3;
 }
 
-.index-pair-photo img {
+.intro-image img {
   width: 280px !important;   /* smaller photo */
   max-width: 100%;
   border-radius: 14px;
   box-shadow: 0 0 18px rgba(255,255,255,0.12);
 }
 
-.index-pair-text {
+.intro-text {
   max-width: 500px;
   background: rgba(0,0,0,0.35);
   border: 1px solid rgba(255,255,255,0.12);
@@ -988,7 +988,7 @@ footer a:hover,
   backdrop-filter: blur(6px);
 }
 
-.index-pair-text p {
+.intro-text p {
   color: #ffffff;
   font-size: 1.2rem;
   line-height: 1.6;
@@ -1003,11 +1003,11 @@ footer a:hover,
     margin: 40px auto;
   }
 
-  .index-pair-photo img {
+  .intro-image img {
     width: 100% !important;
   }
 
-  .index-pair-text {
+  .intro-text {
     padding: 20px 16px;
   }
 }
