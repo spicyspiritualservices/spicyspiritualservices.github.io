@@ -1198,16 +1198,16 @@ footer a:hover,
   }
 }
 
-/* MATCH PHOTO HEIGHT TO INTRO HEIGHT ON MOBILE */
+/* MATCH BOTTOM EDGE OF PHOTO TO INTRO BOX — MOBILE ONLY */
 @media (max-width: 768px) {
   .about-photo {
-    height: 100%;
+    display: flex;
+    align-items: flex-end; /* pushes image to bottom of its grid cell */
   }
 
   .about-photo img {
-    height: 100%;
     width: 100%;
-    object-fit: cover;
-    object-position: center;
+    height: auto;
+    display: block;
   }
 }
