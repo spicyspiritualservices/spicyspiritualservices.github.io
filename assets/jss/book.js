@@ -216,3 +216,12 @@ document.querySelector(".modal-close").addEventListener("click", () => {
 modal.addEventListener("click", (e) => {
   if (e.target === modal) modal.classList.remove("active");
 });
+
+document.querySelectorAll('.category-header').forEach(header => {
+  header.addEventListener('click', () => {
+    const body = header.nextElementSibling;
+
+    header.classList.toggle('open');
+    body.classList.toggle('open');
+  });
+});
