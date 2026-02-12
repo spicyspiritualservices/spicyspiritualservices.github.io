@@ -1197,3 +1197,17 @@ footer a:hover,
     grid-template-columns: 1fr 1fr !important;
   }
 }
+
+/* MATCH PHOTO HEIGHT TO INTRO HEIGHT ON MOBILE */
+@media (max-width: 768px) {
+  .about-photo {
+    height: 100%;
+  }
+
+  .about-photo img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
