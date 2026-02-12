@@ -955,10 +955,10 @@ footer a:hover,
   /* Footer handled in its own block above */
 }
 /* -------------------------------------------------- */
-/* INDEX — SIDE-BY-SIDE INTRO PAIR                     */
+/* INDEX — SIDE-BY-SIDE PHOTO + TEXT                   */
 /* -------------------------------------------------- */
 
-.index-intro-pair {
+.index-pair {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -970,13 +970,13 @@ footer a:hover,
   z-index: 3;
 }
 
-.index-photo img {
+.index-pair-photo img {
   width: 340px;
   border-radius: 14px;
   box-shadow: 0 0 18px rgba(255,255,255,0.12);
 }
 
-.index-text {
+.index-pair-text {
   max-width: 500px;
   background: rgba(0,0,0,0.35);
   border: 1px solid rgba(255,255,255,0.12);
@@ -985,7 +985,7 @@ footer a:hover,
   backdrop-filter: blur(6px);
 }
 
-.index-text p {
+.index-pair-text p {
   color: #ffffff;
   font-size: 1.2rem;
   line-height: 1.6;
@@ -994,17 +994,18 @@ footer a:hover,
 
 /* Mobile */
 @media (max-width: 600px) {
-  .index-intro-pair {
+  .index-pair {
     flex-direction: column;
     gap: 24px;
     margin: 40px auto;
   }
 
-  .index-photo img {
+  .index-pair-photo img {
     width: 100%;
   }
 
-  .index-text {
+  .index-pair-text {
     padding: 20px 16px;
   }
 }
+
