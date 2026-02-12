@@ -757,3 +757,10 @@ html::after {
   margin: 10px 0;
   line-height: 1.5;
 }
+
+/* FORCE SESSION OPTIONS TO BE WHITE */
+.booking-category .category-body .session-card,
+.booking-category .category-body .session-card h4,
+.booking-category .category-body .session-card p {
+  color: #ffffff !important;
+}
