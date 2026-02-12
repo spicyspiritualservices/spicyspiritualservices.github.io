@@ -1129,3 +1129,9 @@ footer a:hover,
 .category-body.open {
   display: block;
 }
+
+.acuity-calendar iframe {
+  border-radius: 16px;
+  box-shadow: 0 0 30px rgba(255,255,255,0.15);
+  backdrop-filter: blur(6px);
+}
