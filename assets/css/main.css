@@ -293,18 +293,18 @@ html::after {
 }
 
 .review-card {
-  background: rgba(255,255,255,0.22);
+  background: rgba(255,255,255,0.45);
   border: 1px solid rgba(255,255,255,0.15);
   border-radius: 14px;
-  padding: 20px;
-  margin-bottom: 20px;
-  backdrop-filter: blur(6px);
+  padding: 24px;
+  margin-bottom: 24px;
+  backdrop-filter: blur(8px);
   color: #2b2b2b;
 }
 
 .review-card p {
-  margin: 0 0 10px;
-  line-height: 1.5;
+  margin: 0 0 12px;
+  line-height: 1.6;
 }
 
 .review-author {
