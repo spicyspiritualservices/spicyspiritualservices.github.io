@@ -519,3 +519,20 @@ html::after {
   line-height: 1.7;
   text-shadow: 0 0 4px rgba(255,255,255,0.45);
 }
+
+@keyframes fadeMoon {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+}
+
+.moon {
+  animation: fadeMoon linear both;
+  animation-timeline: scroll();
+  animation-range: 0% 35%;
+}
