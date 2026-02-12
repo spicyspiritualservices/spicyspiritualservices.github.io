@@ -1326,3 +1326,50 @@ footer a:hover,
     width: 100% !important;
   }
 }
+
+/* NEW WRAPPER TO ISOLATE ABOUT PAGE */
+.about-wrapper {
+  position: relative;
+  z-index: 9999; /* sits ABOVE clouds, moon, stars */
+  width: 100%;
+}
+
+/* FORCE TWO-COLUMN LAYOUT */
+.about-top {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 30px;
+  width: 100%;
+}
+
+/* LEFT COLUMN */
+.about-photo {
+  width: 40% !important;
+  min-width: 280px;
+}
+
+/* RIGHT COLUMN */
+.about-intro {
+  width: 60% !important;
+}
+
+/* BOTTOM SECTION */
+.about-bottom {
+  width: 100% !important;
+  margin-top: 40px;
+  padding: 40px 25px;
+  background: rgba(0,0,0,0.45);
+  border-radius: 14px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .about-top {
+    flex-direction: column !important;
+  }
+
+  .about-photo,
+  .about-intro {
+    width: 100% !important;
+  }
+}
