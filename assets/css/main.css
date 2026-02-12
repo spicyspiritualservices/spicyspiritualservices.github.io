@@ -1011,3 +1011,53 @@ footer a:hover,
     padding: 20px 16px;
   }
 }
+
+/* -------------------------------------------------- */
+/* FLOATING QUOTE — BIG, CENTERED, HERO MOMENT        */
+/* -------------------------------------------------- */
+
+.floating-quote {
+  text-align: center;
+  max-width: 900px;
+  margin: 100px auto 80px;
+  padding: 0 20px;
+  position: relative;
+  z-index: 3;
+}
+
+.floating-quote-text {
+  font-size: 2rem;                 /* bigger */
+  line-height: 1.4;
+  font-weight: 300;                /* softer, more quote-like */
+  color: #ffffff;
+  opacity: 0.95;
+  text-shadow:
+    0 0 12px rgba(255,255,255,0.6),
+    0 0 20px rgba(255,255,255,0.4);
+  max-width: 800px;
+  margin: 0 auto;
+  letter-spacing: 0.3px;
+}
+
+/* Optional: add quote marks automatically */
+.floating-quote-text::before {
+  content: "“";
+  font-size: 2.4rem;
+  opacity: 0.6;
+  vertical-align: top;
+}
+
+.floating-quote-text::after {
+  content: "”";
+  font-size: 2.4rem;
+  opacity: 0.6;
+  vertical-align: bottom;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .floating-quote-text {
+    font-size: 1.5rem;
+    line-height: 1.45;
+  }
+}
