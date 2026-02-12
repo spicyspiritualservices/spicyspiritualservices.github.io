@@ -316,6 +316,19 @@ html::after {
   font-size: 0.95rem;
   font-weight: bold;
 }
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);   /* 3 cards side by side */
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .reviews-grid {
+    grid-template-columns: 1fr;   /* stack on mobile */
+  }
+}
 
 /* "More Reviews" button box */
 .reviews-more {
