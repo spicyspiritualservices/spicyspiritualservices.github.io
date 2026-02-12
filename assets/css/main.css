@@ -1426,3 +1426,43 @@ footer a:hover,
   padding: 40px 25px;
   border-radius: 14px;
 }
+
+/* ALWAYS TWO COLUMNS — DESKTOP + MOBILE */
+.about-top {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 30px;
+  width: 100%;
+}
+
+.about-photo {
+  width: 40% !important;
+  min-width: 200px; /* prevents collapsing */
+}
+
+.about-intro {
+  width: 60% !important;
+}
+
+.about-bottom {
+  width: 100%;
+  max-width: 100%; /* matches the two-column width */
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(6px);
+  padding: 40px 25px;
+  border-radius: 14px;
+  margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+  .about-top {
+    flex-direction: row !important;
+  }
+
+  .about-photo,
+  .about-intro {
+    width: 50% !important;
+  }
+}
