@@ -954,3 +954,57 @@ footer a:hover,
 
   /* Footer handled in its own block above */
 }
+/* -------------------------------------------------- */
+/* INDEX — SIDE-BY-SIDE INTRO PAIR                     */
+/* -------------------------------------------------- */
+
+.index-intro-pair {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 80px auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 3;
+}
+
+.index-photo img {
+  width: 340px;
+  border-radius: 14px;
+  box-shadow: 0 0 18px rgba(255,255,255,0.12);
+}
+
+.index-text {
+  max-width: 500px;
+  background: rgba(0,0,0,0.35);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 16px;
+  padding: 24px;
+  backdrop-filter: blur(6px);
+}
+
+.index-text p {
+  color: #ffffff;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .index-intro-pair {
+    flex-direction: column;
+    gap: 24px;
+    margin: 40px auto;
+  }
+
+  .index-photo img {
+    width: 100%;
+  }
+
+  .index-text {
+    padding: 20px 16px;
+  }
+}
