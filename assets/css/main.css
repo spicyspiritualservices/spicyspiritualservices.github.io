@@ -596,3 +596,162 @@ html::after {
   font-size: 1.2rem;
 }
 
+/* ----------------------------- */
+/* BOOKING PAGE — CATEGORY DROPDOWNS */
+/* ----------------------------- */
+
+.book-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  position: relative;
+  z-index: 3;
+}
+
+.book-header h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.book-subtitle {
+  color: #dcd7e8;
+  max-width: 600px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.booking-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.booking-category {
+  background: rgba(10, 7, 25, 0.75);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 14px;
+  overflow: hidden;
+  backdrop-filter: blur(6px);
+}
+
+.category-header {
+  padding: 14px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.category-header h3 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.chevron {
+  transition: transform 0.2s ease;
+  font-size: 20px;
+}
+
+.booking-category.open .chevron {
+  transform: rotate(90deg);
+}
+
+.category-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease;
+  padding: 0 18px;
+}
+
+.booking-category.open .category-body {
+  max-height: 900px;
+  padding-bottom: 16px;
+}
+
+/* ----------------------------- */
+/* SESSION CARDS */
+/* ----------------------------- */
+
+.session-card {
+  margin-top: 14px;
+  padding: 14px 16px;
+  background: rgba(20, 15, 40, 0.65);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.session-card h4 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.session-card p {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: #cfc9dd;
+}
+
+.session-btn {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 6px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 13px;
+  transition: 0.2s ease;
+}
+
+.session-btn:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+/* ----------------------------- */
+/* MODAL */
+/* ----------------------------- */
+
+.session-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.session-modal.active {
+  display: flex;
+}
+
+.modal-content {
+  background: rgba(15, 10, 35, 0.95);
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 24px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 480px;
+  color: #fff;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.modal-content h3 {
+  margin-top: 0;
+  font-size: 22px;
+}
+
+.modal-content p {
+  margin: 10px 0;
+  line-height: 1.5;
+}
