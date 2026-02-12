@@ -1198,13 +1198,23 @@ footer a:hover,
   }
 }
 
-/* MATCH BOTTOM EDGE OF PHOTO TO INTRO BOX — MOBILE ONLY */
+/* ALIGN PHOTO BOTTOM WITH INTRO BOTTOM — MOBILE ONLY */
 @media (max-width: 768px) {
-  .about-photo {
-    display: flex;
-    align-items: flex-end; /* pushes image to bottom of its grid cell */
+
+  /* Make the grid row equal height */
+  .about-inner {
+    align-items: stretch !important;
   }
 
+  /* Make the photo column fill the full height */
+  .about-photo {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* pushes image to the bottom */
+    height: 100%;
+  }
+
+  /* Keep the image natural */
   .about-photo img {
     width: 100%;
     height: auto;
