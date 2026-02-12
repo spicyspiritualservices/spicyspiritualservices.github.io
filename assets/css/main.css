@@ -1394,3 +1394,35 @@ footer a:hover,
   padding: 30px !important;
   border-radius: 14px !important;
 }
+
+/* SHARED WIDTH FOR BOTH COLUMNS + BOTTOM BOX */
+.about-inner {
+  max-width: 1100px; /* or whatever width you want */
+  margin: 0 auto;    /* centers it */
+  padding: 0 20px;   /* optional side padding */
+}
+
+/* TWO-COLUMN LAYOUT */
+.about-top {
+  display: flex;
+  gap: 30px;
+}
+
+/* LEFT COLUMN */
+.about-photo {
+  width: 40%;
+}
+
+/* RIGHT COLUMN */
+.about-intro {
+  width: 60%;
+}
+
+/* BOTTOM BOX ALIGNS WITH BOTH COLUMNS */
+.about-bottom {
+  margin-top: 40px;
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(6px);
+  padding: 40px 25px;
+  border-radius: 14px;
+}
