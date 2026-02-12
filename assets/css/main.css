@@ -614,7 +614,7 @@ html::after {
 }
 
 .book-subtitle {
-  color: #dcd7e8;
+  color: #2b2b2b ;
   max-width: 600px;
   line-height: 1.5;
   margin-bottom: 30px;
@@ -645,11 +645,13 @@ html::after {
 .category-header h3 {
   font-size: 18px;
   margin: 0;
+  color: #ffffff
 }
 
 .chevron {
   transition: transform 0.2s ease;
   font-size: 20px;
+  color: #ffffff
 }
 
 .booking-category.open .chevron {
@@ -660,7 +662,7 @@ html::after {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.25s ease;
-  padding: 0 18px;
+  padding: 0 18px 0;
 }
 
 .booking-category.open .category-body {
