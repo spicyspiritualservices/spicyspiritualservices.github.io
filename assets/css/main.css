@@ -764,3 +764,120 @@ html::after {
 .booking-category .category-body .session-card p {
   color: #ffffff !important;
 }
+}/* ---------------------------------------- */
+/* GLOBAL MOBILE TUNING — applies to all pages */
+/* ---------------------------------------- */
+
+@media (max-width: 600px) {
+
+  /* BODY SPACING */
+  body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  /* NAVIGATION */
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    padding: 16px;
+  }
+
+  .nav a {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  /* PAGE DIVIDER */
+  .page-divider {
+    margin: 10px 0;
+  }
+
+  /* SKY WRAPPER */
+  .sky-wrapper {
+    height: auto;
+  }
+
+  /* HEADERS */
+  h1, h2, h3 {
+    text-align: center;
+    line-height: 1.3;
+  }
+
+  /* PARAGRAPHS */
+  p {
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  /* LISTS */
+  ul {
+    padding-left: 20px;
+  }
+
+  /* FOOTER */
+  .footer {
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 13px;
+  }
+
+  /* IMAGES */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* ABOUT PAGE */
+  .about-container {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 16px;
+  }
+
+  .about-photo img {
+    width: 100%;
+    border-radius: 12px;
+  }
+
+  .about-text {
+    padding: 0 4px;
+  }
+
+  /* CONTACT PAGE (if you have forms) */
+  form input,
+  form textarea {
+    width: 100%;
+    font-size: 15px;
+    padding: 12px;
+  }
+
+  form button {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  /* BOOKING PAGE — session cards */
+  .session-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 16px;
+  }
+
+  .session-btn {
+    align-self: flex-start;
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+
+  /* MODAL */
+  .modal-content {
+    width: 92%;
+    padding: 20px;
+  }
+}
