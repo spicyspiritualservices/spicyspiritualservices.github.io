@@ -710,7 +710,7 @@ form button:hover {
 /* BOOKING PAGE — MODAL                                */
 /* -------------------------------------------------- */
 
-.modal-overlay {
+.session-modal {
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.55);
@@ -721,7 +721,7 @@ form button:hover {
   z-index: 20;
 }
 
-.modal-overlay.active {
+.session-modal.active {
   display: flex;
 }
 
