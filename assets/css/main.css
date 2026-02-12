@@ -954,12 +954,14 @@ footer a:hover,
 
   /* Footer handled in its own block above */
 }
+
 /* -------------------------------------------------- */
-/* INDEX — SIDE-BY-SIDE PHOTO + TEXT                   */
+/* INDEX — SIDE-BY-SIDE PHOTO + TEXT (FORCED LAYOUT)   */
 /* -------------------------------------------------- */
 
 .index-pair {
-  display: flex;
+  display: flex !important;
+  flex-direction: row !important;
   align-items: center;
   justify-content: center;
   gap: 40px;
@@ -971,7 +973,8 @@ footer a:hover,
 }
 
 .index-pair-photo img {
-  width: 340px;
+  width: 280px !important;   /* smaller photo */
+  max-width: 100%;
   border-radius: 14px;
   box-shadow: 0 0 18px rgba(255,255,255,0.12);
 }
@@ -995,17 +998,16 @@ footer a:hover,
 /* Mobile */
 @media (max-width: 600px) {
   .index-pair {
-    flex-direction: column;
+    flex-direction: column !important;
     gap: 24px;
     margin: 40px auto;
   }
 
   .index-pair-photo img {
-    width: 100%;
+    width: 100% !important;
   }
 
   .index-pair-text {
     padding: 20px 16px;
   }
 }
-
