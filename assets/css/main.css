@@ -447,6 +447,10 @@ html::after {
   text-shadow: 0 0 4px rgba(255,255,255,0.45);
 }
 
+.about-text p {
+  color: #ffffff
+}
+
 .about-text h2 {
   font-size: 2.4rem;
   margin-bottom: 20px;
