@@ -1386,3 +1386,11 @@ footer a:hover,
     width: 100% !important;
   }
 }
+
+/* MATCH INTRO BACKGROUND TO BOTTOM SECTION */
+.about-intro {
+  background: rgba(0, 0, 0, 0.45) !important;
+  backdrop-filter: blur(6px) !important;
+  padding: 30px !important;
+  border-radius: 14px !important;
+}
