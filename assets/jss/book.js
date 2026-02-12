@@ -181,6 +181,9 @@ document.querySelectorAll(".session-btn").forEach(btn => {
     modalTitle.textContent = s.title;
     modalMeta.textContent = s.meta;
     modalDescription.textContent = s.description;
+    modalBookBtn.onclick = () => {
+      window.open("https://app.acuityscheduling.com/schedule.php?owner=38371407", "_blank");
+    };
 
     modal.classList.add("active");
   });
