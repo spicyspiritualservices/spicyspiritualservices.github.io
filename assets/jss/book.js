@@ -195,8 +195,10 @@ const modalMeta = document.getElementById("modalMeta");
 const modalDescription = document.getElementById("modalDescription");
 const modalBookBtn = document.getElementById("modalBookBtn");
 
-document.querySelectorAll("[data-session]").forEach(card => {
-  card.addEventListener("click", () => {
+document.querySelectorAll(".session-btn").forEach(btn => {
+  btn.addEventListener("click", (e) => {
+    e.stopPropagaation();
+    const card = btn.closest(".session-card");
     const key = card.getAttribute("data-session");
     const s = sessions[key];
 
