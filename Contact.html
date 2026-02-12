@@ -1,22 +1,46 @@
-<!-- CONTACT PAGE -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link rel="stylesheet" href="main.css">
+</head>
 
-<div class="soft-divider"></div>
+<body>
 
-<section class="contact">
-  <h1 class="contact-title">Reach out — I’d love to hear from you.</h1>
+  <!-- NAVIGATION -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="book.html">Book</a>
+      <a href="Contact.html" class="active">Contact</a>
+    </nav>
+  </header>
 
-  <form action="https://formsubmit.co/YOURGMAIL@gmail.com" method="POST" class="contact-form">
+  <!-- CELESTIAL DIVIDER -->
+  <div class="soft-divider"></div>
 
-    <!-- FormSubmit settings -->
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_template" value="table">
-    <input type="hidden" name="_subject" value="New message from your website">
-    <input type="hidden" name="_next" value="https://YOURDOMAIN.com/thankyou.html">
+  <!-- CONTACT SECTION -->
+  <section class="contact">
+    <h1 class="contact-title">Reach out — I’d love to hear from you.</h1>
 
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <textarea name="message" placeholder="Your Message" required></textarea>
+    <form action="https://formsubmit.co/spicyspiritualservices@gmail.com" method="POST" class="contact-form">
 
-    <button type="submit" class="primary-button">Send Message</button>
-  </form>
-</section>
+      <!-- FormSubmit settings -->
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_subject" value="New message from your website">
+
+
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+
+      <button type="submit" class="primary-button">Send Message</button>
+    </form>
+  </section>
+
+</body>
+</html>
