@@ -1200,3 +1200,71 @@ footer a:hover,
     margin-top: 20px;
   }
 }
+
+/* ABOUT PAGE LAYOUT FIXES */
+
+/* Ensure the top section is truly two columns */
+.about-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin-bottom: 50px;
+  width: 100%;
+  position: relative;
+  z-index: 5; /* keeps it above sky layers */
+}
+
+/* Photo column */
+.about-photo img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 10px;
+  display: block;
+}
+
+/* Intro text column */
+.about-intro {
+  flex: 1;
+  line-height: 1.7;
+  position: relative;
+  z-index: 5;
+}
+
+/* FULL-WIDTH BOTTOM BOX */
+.about-bottom {
+  width: 100%;
+  margin-top: 40px;
+  padding: 40px 25px;
+  background: rgba(0, 0, 0, 0.35); /* darker so it shows over your sky */
+  backdrop-filter: blur(4px);
+  border-radius: 12px;
+  line-height: 1.7;
+  position: relative;
+  z-index: 5; /* forces it above clouds/constellations */
+}
+
+/* Headings inside bottom box */
+.about-bottom h3 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+/* MOBILE FIXES */
+@media (max-width: 768px) {
+  .about-top {
+    flex-direction: column;
+  }
+
+  .about-photo img {
+    max-width: 100%;
+  }
+
+  .about-intro {
+    width: 100%;
+  }
+
+  .about-bottom {
+    margin-top: 20px;
+  }
+}
