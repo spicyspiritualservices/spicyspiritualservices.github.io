@@ -311,9 +311,10 @@ html::after {
 
 .review-card p {
   color: #2b2b2b !important;
-  opacity: 0.95;
+  opacity: 0.9;
   line-height: 1.6;
-  font-size: 1.05rem;
+  font-size: 0.95rem;
+  font-weight: bold;
 }
 
 /* "More Reviews" button box */
