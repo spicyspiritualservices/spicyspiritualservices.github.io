@@ -10,23 +10,6 @@ body {
   color: #2b2b2b;
   text-shadow: 0 0 6px rgba(255,255,255,0.55),
                0 0 10px rgba(255,255,255,0.35);
-  <script>
-  document.addEventListener('scroll', () => {
-    const moon = document.querySelector('.moon');
-    const scrollY = window.scrollY;
-
-    // Adjust these values to tune the fade
-    const fadeStart = 0;      // when fading begins
-    const fadeEnd = 300;      // when moon is fully gone
-
-    let opacity = 1 - (scrollY - fadeStart) / (fadeEnd - fadeStart);
-    opacity = Math.max(0, Math.min(1, opacity));
-
-    moon.style.opacity = opacity;
-    moon.style.transform = `translateY(${scrollY * -0.1}px)`;
-  });
-</script>
-
 }
 
 /* TWINKLING STARFIELD */
