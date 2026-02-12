@@ -1198,15 +1198,15 @@ footer a:hover,
   }
 }
 
-/* ALIGN PHOTO BOTTOM WITH INTRO BOTTOM — MOBILE ONLY */
+/* FORCE EQUAL HEIGHT COLUMNS + BOTTOM ALIGNMENT ON MOBILE */
 @media (max-width: 768px) {
 
-  /* Make the grid row equal height */
+  /* Make both columns stretch to the same height */
   .about-inner {
     align-items: stretch !important;
   }
 
-  /* Make the photo column fill the full height */
+  /* Make the photo column fill the full height of the row */
   .about-photo {
     display: flex;
     flex-direction: column;
