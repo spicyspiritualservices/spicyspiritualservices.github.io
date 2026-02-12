@@ -1,1 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book a Session — Ruthie</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
 
+<body>
+
+  <!-- NAVIGATION -->
+  <header>
+    <div class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="Contact.html">Contact</a>
+      <a href="book.html" class="active">Book a Session</a>
+    </div>
+  </header>
+
+  <!-- PAGE DIVIDER -->
+  <div class="page-divider"></div>
+
+  <!-- SKY WRAPPER -->
+  <div class="sky-wrapper">
+    <div class="clouds"></div>
+    <div class="constellations"></div>
+    <div class="shooting-star"></div>
+    <div class="moon"></div>
+  </div>
+
+  <!-- BOOKING SECTION -->
+  <section class="book-section">
+
+    <!-- HEADER -->
+    <div class="book-header">
+      <h2><span class="icon">✦</span> Book a Session</h2>
+      <p class="book-subtitle">
+        Choose the container your spirit is asking for.  
+        Click a category to open it, then select a session to view details and book.
+      </p>
+    </div>
+
+    <!-- CATEGORIES -->
+    <div class="booking-categories">
+
+      <!-- PSYCHISM -->
+      <div class="booking-category">
+        <div class="category-header">
+          <h3>Psychism</h3>
+          <span class="chevron">›</span>
+        </div>
+        <div class="category-body">
+
+          <div class="session-card" data-session="psychism-general">
+            <div>
+              <h4>General Psychic Reading</h4>
+              <p>45 minutes • $45</p>
+            </div>
+            <button class="session-btn">View</button>
+          </div>
+
+          <div class="session-card" data-session="psychism-pet">
+            <div>
+              <h4>Pet Psychic Reading</h4>
+              <p>20 minutes • $30</p>
+            </div>
+            <button class="session-btn">View</button>
+          </div>
+
+          <div class="session-card" data-session="psychism-one-topic">
+            <div>
+              <h4>One Topic Psychic Reading</h4>
+              <p>45 minutes • $30</p>
+            </div>
+            <button class="session-btn">View</button>
+          </div>
+
+          <div class="session-card" data-session="psychism-guide">
+            <div>
+              <h4>Guide Reading</h4>
+              <p>20 minutes • $30</p>
+            </div>
+            <button class="session-btn">View</button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- MEDIUMSHIP -->
+      <div class="booking-category">
+        <div class="category-header">
+          <h3>Mediumship</h3>
+          <span class="chevron">›</span>
+        </div>
+        <div class="category-body">
+
+          <div class="session-card" data-session="mediumship-direct">
+            <div>
+              <h4>Direct Mediumship</h4>
+              <p>60 minutes • $45</p>
+            </div>
+            <button class="session-btn">View</button>
+          </div>
+
+          <div class="session-card" data-session="mediumship-spirit-led">
+            <div>
+              <h4>Spirit‑Led Mediumship</h4>
+              <p>90 minutes • $60</p>
+            </div>
+            <button class="session-btn">View</button>
+          </div>
+
+          <div class="session-card" data-session="mediumship-pet">
+            <div>
+              <h4>Pet Mediumship</h4>
+              <p>45 minutes • $35</p>
+            </div>
+            <button class="session-btn">View</button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- REIKI -->
+      <div class="booking-category">
+        <div class="category-header">
+          <h3>Reiki</h3>
+          <span class="chevron">›</span>
+        </div>
+        <div class="category-body">
+
+          <div class="session-card" data-session="reiki-quick">
+            <div>
+              <h4>Quick Boost Reiki</h4>
+              <p>30 minutes • $20</p>
+            </div>
+            <button class="session-btn">View</button>
+          </div>
+
+          <div class="session-card" data-session="reiki-deep">
+            <div>
+              <h4>Deep Healing Reiki</h4>
+              <p>60 minutes • $50</p>
+            </div>
+            <button class="session-btn">View</button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ASTROLOGY -->
+      <div class="booking-category">
+        <div class="category-header">
+          <h3>Astrology</h3>
+          <span class="chevron">›</span>
+        </div>
+        <div class="category-body">
+
+          <div class="session-card" data-session="astro-birth">
+            <div>
+              <h4>Birth Chart Reading</h4>
+              <p>45 minutes • $50</p>
+            </div>
+            <button class="session-btn">View</button>
+          </div>
+
+          <div class="session-card" data-session="astro-transit">
+            <div>
+              <h4>Transit Chart Reading</h4>
+              <p>30 minutes • $35</p>
+            </div>
+            <button class="session-btn">View</button>
+          </div>
+
+          <div class="session-card" data-session="astro-progressed">
+            <div>
+              <h4>Progressed Chart Reading</h4>
+              <p>30 minutes • $35</p>
+            </div>
+            <button class="session-btn">View</button>
+          </div>
+
+          <div class="session-card" data-session="astro-all-three">
+            <div>
+              <h4>All Three (Birth + Transit + Progressed)</h4>
+              <p>90 minutes • $90</p>
+            </div>
+            <button class="session-btn">View</button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- MENTORSHIP -->
+      <div class="booking-category">
+        <div class="category-header">
+          <h3>Mentorship</h3>
+          <span class="chevron">›</span>
+        </div>
+        <div class="category-body">
+
+          <div class="session-card" data-session="mentorship-meditation">
+            <div>
+              <h4>Meditation Mentorship</h4>
+              <p>8 weeks • $77</p>
+            </div>
+            <button class="session-btn">View</button>
+          </div>
+
+          <div class="session-card" data-session="mentorship-reiki">
+            <div>
+              <h4>Reiki Mentorship</h4>
+              <p>6 weeks • $333</p>
+            </div>
+            <button class="session-btn">View</button>
+          </div>
+
+          <div class="session-card" data-session="mentorship-tarot">
+            <div>
+              <h4>Tarot Mentorship</h4>
+              <p>8 weeks • $111</p>
+            </div>
+            <button class="session-btn">View</button>
+          </div>
+
+          <div class="session-card" data-session="mentorship-spiritual-beginner">
+            <div>
+              <h4>Spiritual Beginner Mentorship</h4>
+              <p>5 months • $888</p>
+            </div>
+            <button class="session-btn">View</button>
+          </div>
+
+          <div class="session-card" data-session="mentorship-empath">
+            <div>
+              <h4>Empath 101</h4>
+              <p>8 weeks • $77</p>
+            </div>
+            <button class="session-btn">View</button>
+          </div>
+
+          <div class="session-card" data-session="mentorship-angelology">
+            <div>
+              <h4>Angelology Mentorship</h4>
+              <p>8 weeks • $77</p>
+            </div>
+            <button class="session-btn">View</button>
+          </div>
+
+          <div class="session-card" data-session="mentorship-shadow">
+            <div>
+              <h4>Shadow Work Mentorship</h4>
+              <p>8 weeks • $77</p>
+            </div>
+            <button class="session-btn">View</button>
+          </div>
+
+          <div class="session-card" data-session="mentorship-inner-child">
+            <div>
+              <h4>Inner Child Mentorship</h4>
+              <p>8 weeks • $77</p>
+            </div>
+            <button class="session-btn">View</button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- PRACTICE CIRCLES -->
+      <div class="booking-category">
+        <div class="category-header">
+          <h3>Practice Circles</h3>
+          <span class="chevron">›</span>
+        </div>
+        <div class="category-body">
+
+          <div class="session-card" data-session="circle-reiki">
+            <div>
+              <h4>Reiki Practice Circle</h4>
+              <p>Fridays • 8 PM EST • $15</p>
+            </div>
+            <button class="session-btn">View</button>
+          </div>
+
+          <div class="session-card" data-session="circle-tarot">
+            <div>
+              <h4>Tarot Practice Circle</h4>
+              <p>Tuesdays • 8 PM EST • $15</p>
+            </div>
+            <button class="session-btn">View</button>
+          </div>
+
+          <div class="session-card" data-session="circle-spiritual-dev">
+            <div>
+              <h4>Spiritual Development Circle</h4>
+              <p>Mondays • 8 PM EST • $15</p>
+            </div>
+            <button class="session-btn">View</button>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2026 Ruthie — All rights reserved.</p>
+  </footer>
+
+  <!-- MODAL -->
+  <div class="session-modal" id="sessionModal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <h3 id="modalTitle"></h3>
+      <p id="modalMeta"></p>
+      <p id="modalDescription"></p>
+      <button id="modalBookBtn" class="session-btn">Book Now</button>
+    </div>
+  </div>
+
+  <script src="assets/js/book.js"></script>
+
+</body>
+</html>
