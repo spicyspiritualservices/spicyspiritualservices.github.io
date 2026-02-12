@@ -481,8 +481,8 @@ html::after {
 
 .site-footer {
   text-align: center;
-  padding: 3rem 2rem;
-  color: #2b2b2b;
+  padding: 20px 0;
+  color: #ffffff;
   font-size: 0.9rem;
   opacity: 0.7;
 }
