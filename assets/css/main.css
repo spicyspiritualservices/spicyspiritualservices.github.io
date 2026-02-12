@@ -1373,3 +1373,23 @@ footer a:hover,
     width: 100% !important;
   }
 }
+
+/* DIAGNOSTIC OVERRIDE — FORCES TWO COLUMNS */
+.about-top {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+  gap: 40px !important;
+  border: 3px solid red !important; /* TEMPORARY so we can SEE the container */
+}
+
+.about-photo {
+  width: 40% !important;
+  border: 3px solid blue !important; /* TEMPORARY */
+}
+
+.about-intro {
+  width: 60% !important;
+  border: 3px solid green !important; /* TEMPORARY */
+}
