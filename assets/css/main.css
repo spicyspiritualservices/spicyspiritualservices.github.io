@@ -1334,18 +1334,31 @@ footer a:hover,
   width: 100%;
 }
 
-/* FORCE TWO-COLUMN LAYOUT */
+/* FORCE ABOUT PAGE INTO CORRECT LAYOUT */
+.about-wrapper,
+.about-container,
+.about-top,
+.about-photo,
+.about-intro,
+.about-bottom {
+  display: block !important;
+  position: relative;
+  z-index: 9999;
+}
+
+/* NOW FORCE THE TOP INTO TWO COLUMNS */
 .about-top {
   display: flex !important;
   flex-direction: row !important;
-  gap: 30px;
-  width: 100%;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+  gap: 40px !important;
+  width: 100% !important;
 }
 
 /* LEFT COLUMN */
 .about-photo {
   width: 40% !important;
-  min-width: 280px;
 }
 
 /* RIGHT COLUMN */
@@ -1356,10 +1369,10 @@ footer a:hover,
 /* BOTTOM SECTION */
 .about-bottom {
   width: 100% !important;
-  margin-top: 40px;
-  padding: 40px 25px;
-  background: rgba(0,0,0,0.45);
-  border-radius: 14px;
+  margin-top: 40px !important;
+  padding: 40px 25px !important;
+  background: rgba(0,0,0,0.45) !important;
+  border-radius: 14px !important;
 }
 
 /* MOBILE */
@@ -1372,24 +1385,4 @@ footer a:hover,
   .about-intro {
     width: 100% !important;
   }
-}
-
-/* DIAGNOSTIC OVERRIDE — FORCES TWO COLUMNS */
-.about-top {
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: flex-start !important;
-  justify-content: flex-start !important;
-  gap: 40px !important;
-  border: 3px solid red !important; /* TEMPORARY so we can SEE the container */
-}
-
-.about-photo {
-  width: 40% !important;
-  border: 3px solid blue !important; /* TEMPORARY */
-}
-
-.about-intro {
-  width: 60% !important;
-  border: 3px solid green !important; /* TEMPORARY */
 }
