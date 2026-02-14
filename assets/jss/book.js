@@ -174,7 +174,7 @@ const modalBookBtn = document.getElementById("modalBookBtn");
 document.querySelectorAll(".session-btn").forEach(btn => {
   btn.addEventListener("click", (e) => {
     e.stopPropagation();
-    e.stopImmediatePropogation();
+    e.stopImmediatePropagation();
     
     const card = btn.closest(".session-card");
     const key = card.getAttribute("data-session");
