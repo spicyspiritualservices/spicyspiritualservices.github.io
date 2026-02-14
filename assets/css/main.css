@@ -1251,14 +1251,20 @@ footer a:hover,
   }
 }
 
-/* FORCE ABOUT PAGE TO STACK ON MOBILE */
+/* FINAL OVERRIDE — FORCE ABOUT PAGE TO STACK ON MOBILE */
 @media (max-width: 768px) {
 
+  /* Kill ALL grid behavior on the About page */
+  .about-wrapper,
   .about-inner {
-    display: block !important;      /* overrides ANY grid or flex */
+    display: block !important;
+    grid-template-columns: none !important;
+    grid-template-rows: none !important;
+    gap: 0 !important;
     width: 100% !important;
   }
 
+  /* Make each section full-width and stacked */
   .about-photo,
   .about-intro,
   .about-bottom {
@@ -1267,10 +1273,10 @@ footer a:hover,
     margin-bottom: 30px;
   }
 
-  /* Keep the photo smaller, not full-width */
+  /* Keep the photo smaller and centered */
   .about-photo img {
     width: 100%;
-    max-width: 300px;   /* adjust this number to control size */
+    max-width: 300px;   /* adjust this number to taste */
     margin: 0 auto;
     display: block;
   }
