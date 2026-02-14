@@ -1223,26 +1223,37 @@ footer a:hover,
   transition: opacity 1.2s ease-in-out;
 }
 
-/* MOBILE ABOUT PAGE — STACKED LAYOUT WITH SMALLER PHOTO */
+* MOBILE ABOUT PAGE — STACK USING THE GRID ITSELF */
 @media (max-width: 768px) {
 
   .about-inner {
-    display: block !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;   /* one column only */
+    grid-template-rows: auto auto auto;
+    gap: 24px;
     width: 100% !important;
   }
 
-  .about-photo,
-  .about-intro,
+  .about-photo {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .about-intro {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
   .about-bottom {
-    width: 100% !important;
-    margin-bottom: 30px;
-    display: block !important;
+    grid-column: 1;
+    grid-row: 3;
   }
 
   .about-photo img {
     width: 100%;
-    max-width: 300px;  /* adjust size here */
+    max-width: 300px;   /* adjust smaller/bigger if you want */
     margin: 0 auto;
     display: block;
   }
 }
+
