@@ -337,7 +337,7 @@ footer {
 .contact-container {
   max-width: 800px;
   margin: 80px auto;
-  padding: 40px 40px;
+  padding: 40px 20px;
   background: rgba(0,0,0,0.45);
   backdrop-filter: blur(6px);
   border-radius: 14px;
@@ -361,7 +361,7 @@ footer {
   width: 100%;
   display: block;
   margin-bottom: 18px;
-  padding: 12px;
+  padding: 0 20px;
   border-radius: 10px;
   border: none;
 }
