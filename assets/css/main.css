@@ -345,7 +345,7 @@ footer {
   }
 
   .about-intro { 
-    height: 97%;
+    height: 95%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
