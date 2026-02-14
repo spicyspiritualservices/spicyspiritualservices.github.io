@@ -1275,8 +1275,32 @@ footer a:hover,
     display: block;
   }
   
-}
-/* TEST RULE */
-.about-test-debug {
-  background: red !important;
+/* ABOUT PAGE — FINAL MOBILE OVERRIDE */
+@media (max-width: 768px) {
+
+  /* Kill ALL grid behavior on this page only */
+  .about-page .about-inner {
+    display: block !important;
+    grid-template-columns: none !important;
+    grid-template-rows: none !important;
+    gap: 0 !important;
+    width: 100% !important;
+  }
+
+  /* Stack each section */
+  .about-page .about-photo,
+  .about-page .about-intro,
+  .about-page .about-bottom {
+    width: 100% !important;
+    display: block !important;
+    margin-bottom: 30px;
+  }
+
+  /* Keep the photo small and centered */
+  .about-page .about-photo img {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    display: block;
+  }
 }
