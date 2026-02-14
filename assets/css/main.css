@@ -1251,28 +1251,27 @@ footer a:hover,
   }
 }
 
-/* MOBILE ABOUT PAGE — STACKED LAYOUT WITH SMALLER PHOTO */
+/* FORCE ABOUT PAGE TO STACK ON MOBILE */
 @media (max-width: 768px) {
 
-  /* Turn off the grid so everything stacks */
   .about-inner {
-    display: block !important;
+    display: block !important;      /* overrides ANY grid or flex */
+    width: 100% !important;
   }
 
-  /* Each section becomes full width */
   .about-photo,
   .about-intro,
   .about-bottom {
-    width: 100%;
+    width: 100% !important;
+    display: block !important;
     margin-bottom: 30px;
   }
 
-  /* Keep the photo smaller and elegant */
+  /* Keep the photo smaller, not full-width */
   .about-photo img {
     width: 100%;
-    max-width: 320px;   /* controls how big the photo gets */
-    margin: 0 auto;     /* centers the photo */
+    max-width: 300px;   /* adjust this number to control size */
+    margin: 0 auto;
     display: block;
-    border-radius: 12px;
   }
 }
