@@ -1,19 +1,19 @@
-/* -------------------------------------------------- */
-/* GLOBAL BASE + BACKGROUND SKY                       */
-/* -------------------------------------------------- */
+/* ============================================================
+   1. GLOBAL BASE + SKY BACKGROUND
+   ============================================================ */
 
 body {
   margin: 0;
   font-family: "Georgia", serif;
   background: linear-gradient(135deg, #6a78a0, #7a68a0);
   background-attachment: fixed;
-  color: #2b2b2b;
-  text-shadow: 
+  color: #ffffff;
+  text-shadow:
     0 0 6px rgba(255,255,255,0.55),
     0 0 10px rgba(255,255,255,0.35);
 }
 
-/* TWINKLING STARFIELD */
+/* Twinkling starfield */
 body::before {
   content: "";
   position: fixed;
@@ -28,13 +28,7 @@ body::before {
   animation: twinkle 6s infinite ease-in-out alternate;
 }
 
-@keyframes twinkle {
-  0%   { opacity: 0.2; transform: scale(1); }
-  50%  { opacity: 0.6; transform: scale(1.02); }
-  100% { opacity: 0.3; transform: scale(0.98); }
-}
-
-/* LARGE GLOWING STARS */
+/* Large glowing stars */
 body::after {
   content: "";
   position: fixed;
@@ -50,13 +44,7 @@ body::after {
   animation: glowpulse 8s infinite ease-in-out alternate;
 }
 
-@keyframes glowpulse {
-  0%   { opacity: 0.25; transform: scale(1); }
-  50%  { opacity: 0.55; transform: scale(1.03); }
-  100% { opacity: 0.35; transform: scale(0.97); }
-}
-
-/* AURORA */
+/* Aurora */
 html::before {
   content: "";
   position: fixed;
@@ -72,13 +60,7 @@ html::before {
   opacity: 0.18;
 }
 
-@keyframes auroraFlow {
-  0%   { transform: translateY(0) translateX(0) scale(1); }
-  50%  { transform: translateY(-40px) translateX(25px) scale(1.08); }
-  100% { transform: translateY(10px) translateX(-10px) scale(0.98); }
-}
-
-/* IRIDESCENT SHIMMER */
+/* Iridescent shimmer */
 html::after {
   content: "";
   position: fixed;
@@ -98,13 +80,7 @@ html::after {
   opacity: 0.04;
 }
 
-@keyframes iridescentShift {
-  0%   { background-position: 0% 50%; }
-  50%  { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* SHOOTING STAR */
+/* Shooting star */
 .shooting-star {
   position: fixed;
   top: -20px;
@@ -118,13 +94,7 @@ html::after {
   z-index: 2;
 }
 
-@keyframes shoot {
-  0%   { transform: translate(0,0) scale(1); opacity: 1; }
-  70%  { transform: translate(600px,300px) scale(0.8); opacity: 0.9; }
-  100% { transform: translate(900px,450px) scale(0.2); opacity: 0; }
-}
-
-/* CLOUDS */
+/* Clouds */
 .clouds {
   position: fixed;
   inset: 0;
@@ -138,12 +108,7 @@ html::after {
   pointer-events: none;
 }
 
-@keyframes drift {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-300px); }
-}
-
-/* CONSTELLATIONS */
+/* Constellations */
 .constellations {
   position: fixed;
   inset: 0;
@@ -160,29 +125,8 @@ html::after {
   filter: drop-shadow(0 0 4px rgba(255,255,255,0.6));
 }
 
-.constellations::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background:
-    radial-gradient(circle at 15% 25%, rgba(255,255,255,0.18) 2px, transparent 3px),
-    radial-gradient(circle at 75% 65%, rgba(255,255,255,0.15) 2px, transparent 3px),
-    radial-gradient(circle at 40% 80%, rgba(255,255,255,0.12) 2px, transparent 3px),
-    radial-gradient(circle at 85% 30%, rgba(255,255,255,0.16) 2px, transparent 3px);
-  opacity: 0.35;
-  filter: blur(2px);
-  animation: deepStars 120s linear infinite;
-}
-
-@keyframes deepStars {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-80px); }
-}
-
-/* MOON */
+/* Moon */
 .moon {
-  transition: opacity 0.4s ease, transform 0.4s ease;
   position: fixed;
   top: 8%;
   right: 6%;
@@ -196,17 +140,9 @@ html::after {
   z-index: 3;
 }
 
-.moon::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  background: #c7d8ff;
-  transform: translate(20px, 0);
-}
-/* -------------------------------------------------- */
-/* NAVIGATION                                          */
-/* -------------------------------------------------- */
+/* ============================================================
+   2. NAVIGATION
+   ============================================================ */
 
 .nav {
   display: flex;
@@ -218,23 +154,24 @@ html::after {
 }
 
 .nav a {
-  color: #2b2b2b;
+  color: #ffffff;
   text-decoration: none;
   font-size: 1.05rem;
   padding: 8px 14px;
   border-radius: 8px;
   transition: 0.25s ease;
-  text-shadow: 0 0 6px rgba(255,255,255,0.55);
 }
 
 .nav a:hover {
   background: rgba(255,255,255,0.18);
   box-shadow: 0 0 10px rgba(255,255,255,0.25);
 }
-/* -------------------------------------------------- */
-/* HOMEPAGE — HERO + INTRO                            */
-/* -------------------------------------------------- */
 
+/* ============================================================
+   3. HOMEPAGE
+   ============================================================ */
+
+/* HERO */
 .hero {
   text-align: center;
   padding: 80px 20px 40px;
@@ -248,22 +185,16 @@ html::after {
   font-size: 2.8rem;
   margin-bottom: 20px;
   color: #ffffff;
-  text-shadow: 0 0 10px rgba(255,255,255,0.6);
 }
 
 .hero p {
   font-size: 1.2rem;
   max-width: 700px;
   margin: 0 auto 30px;
-  color: #ffffff;
-  line-height: 1.6;
   opacity: 0.9;
 }
 
-/* -------------------------------------------------- */
-/* HOMEPAGE — INTRO SECTION                           */
-/* -------------------------------------------------- */
-
+/* INTRO */
 .intro-section {
   max-width: 900px;
   margin: 40px auto;
@@ -273,17 +204,7 @@ html::after {
   z-index: 3;
 }
 
-.intro-section p {
-  font-size: 1.15rem;
-  line-height: 1.6;
-  color: #ffffff;
-  opacity: 0.9;
-}
-
-/* -------------------------------------------------- */
-/* HOMEPAGE — REVIEWS                                 */
-/* -------------------------------------------------- */
-
+/* REVIEWS */
 .reviews-section {
   max-width: 900px;
   margin: 60px auto;
@@ -292,72 +213,23 @@ html::after {
   z-index: 3;
 }
 
-.review-card {
-  background: rgba(255,255,255,0.45);
-  border: 1px solid rgba(255,255,255,0.15);
-  border-radius: 14px;
-  padding: 24px;
-  margin-bottom: 24px;
-  backdrop-filter: blur(8px);
-  color: #2b2b2b;
-}
-
-.review-author {
-  font-size: 0.95rem;
-  font-weight: bold;
-  color: #2b2b2b;
-  opacity: 0.8;
-}
-
-.review-card p {
-  color: #2b2b2b !important;
-  opacity: 0.9;
-  line-height: 1.6;
-  font-size: 0.95rem;
-  font-weight: bold;
-}
 .reviews-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);   /* 3 cards side by side */
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   max-width: 1100px;
   margin: 0 auto;
 }
 
-@media (max-width: 900px) {
-  .reviews-grid {
-    grid-template-columns: 1fr;   /* stack on mobile */
-  }
-}
-
-/* "More Reviews" button box */
-.reviews-more {
-  background: rgba(255, 255, 255, 0.28);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+.review-card {
+  background: rgba(255,255,255,0.45);
   border-radius: 14px;
-  padding: 16px 20px;
-  text-align: center;
-  margin: 24px 0;
-  backdrop-filter: blur(6px);
-  transition: 0.2s ease;
-}
-
-.reviews-more:hover {
-  background: rgba(255, 255, 255, 0.18);
-}
-
-.reviews-more a {
+  padding: 24px;
+  backdrop-filter: blur(8px);
   color: #2b2b2b;
-  font-size: 16px;
-  text-decoration: none;
-  font-weight: 500;
-  letter-spacing: 0.3px;
 }
 
-/* -------------------------------------------------- */
-/* HOMEPAGE — CALL TO ACTION                          */
-/* -------------------------------------------------- */
-
+/* CTA */
 .cta {
   text-align: center;
   padding: 60px 20px;
@@ -367,91 +239,19 @@ html::after {
   z-index: 3;
 }
 
-.cta h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #2b2b2b;
-  text-shadow: 0 0 10px rgba(255,255,255,0.6);
-}
-
-.cta p {
-  font-size: 1.15rem;
-  max-width: 700px;
-  margin: 0 auto 30px;
-  color: #ffffff;
-  opacity: 0.9;
-  line-height: 1.6;
-}
-
-.primary-button {
-  display: inline-block;
-  padding: 14px 32px;
-  background: rgba(255,255,255,0.2);
-  border: 1px solid rgba(255,255,255,0.4);
-  border-radius: 30px;
-  color: #ffffff;
-  font-size: 1.1rem;
-  text-decoration: none;
-  transition: 0.25s ease;
-  backdrop-filter: blur(4px);
-}
-
-.primary-button:hover {
-  background: rgba(255,255,255,0.3);
-  box-shadow: 0 0 12px rgba(255,255,255,0.4);
-}
-/* -------------------------------------------------- */
-/* SECTION TITLES + BODY TEXT                         */
-/* -------------------------------------------------- */
-
-.section-title {
+/* FLOATING QUOTE */
+.floating-quote {
   text-align: center;
-  margin: 60px 0 20px;
-  color: #ffffff;
-  font-size: 2rem;
-  text-shadow: 0 0 10px rgba(255,255,255,0.6);
+  max-width: 900px;
+  margin: 100px auto 80px;
+  padding: 0 20px;
+  position: relative;
+  z-index: 3;
 }
 
-.section-subtitle {
-  text-align: center;
-  margin-bottom: 40px;
-  color: #ffffff;
-  font-size: 1.2rem;
-  opacity: 0.85;
-  line-height: 1.6;
-}
-
-p {
-  font-size: 1.1rem;
-  line-height: 1.65;
-  color: #ffffff;
-  opacity: 0.9;
-  margin-bottom: 18px;
-}
-
-ul {
-  padding-left: 24px;
-  margin-bottom: 20px;
-}
-
-li {
-  margin-bottom: 10px;
-  line-height: 1.55;
-  color: #ffffff;
-  opacity: 0.9;
-}
-
-/* PAGE DIVIDER */
-.page-divider {
-  width: 100%;
-  height: 1px;
-  background: rgba(255,255,255,0.25);
-  margin: 40px 0;
-  opacity: 0.5;
-}
-/* ================================
-   ABOUT PAGE — DESKTOP LAYOUT
-   ================================ */
+/* ============================================================
+   4. ABOUT PAGE — CLEAN REBUILD
+   ============================================================ */
 
 .about-wrapper {
   position: relative;
@@ -470,75 +270,53 @@ li {
   max-width: 1100px;
 }
 
-/* PHOTO (LEFT COLUMN) */
-.about-photo {
-  grid-column: 1;
-  grid-row: 1;
-}
-
+/* Photo */
 .about-photo img {
   width: 100%;
   border-radius: 12px;
   display: block;
 }
 
-/* INTRO BOX (RIGHT COLUMN) */
+/* Intro */
 .about-intro {
-  grid-column: 2;
-  grid-row: 1;
   background: rgba(0,0,0,0.45);
   backdrop-filter: blur(6px);
   padding: 25px;
   border-radius: 14px;
-  color: #fff;
 }
 
-/* BOTTOM SECTION (FULL WIDTH) */
+/* Bottom */
 .about-bottom {
   grid-column: 1 / 3;
-  grid-row: 2;
   background: rgba(0,0,0,0.45);
   backdrop-filter: blur(6px);
   padding: 40px 25px;
   border-radius: 14px;
-  color: #fff;
 }
 
-
-/* ================================
-   ABOUT PAGE — MOBILE LAYOUT
-   ================================ */
-
+/* MOBILE — Option 3 (editorial, smaller photo, stacked) */
 @media (max-width: 768px) {
-
-  /* Turn the grid into a stacked layout */
-  .about-inner {
+  .about-page .about-inner {
     display: block;
     width: 100%;
   }
 
-  /* Stack each section */
-  .about-photo,
-  .about-intro,
-  .about-bottom {
+  .about-page .about-photo,
+  .about-page .about-intro,
+  .about-page .about-bottom {
     width: 100%;
     margin-bottom: 30px;
-    display: block;
   }
 
-  /* Keep the photo small + centered */
-  .about-photo img {
-    width: 100%;
+  .about-page .about-photo img {
     max-width: 300px;
     margin: 0 auto;
-    display: block;
-    border-radius: 12px;
   }
 }
 
-/* -------------------------------------------------- */
-/* CONTACT PAGE                                        */
-/* -------------------------------------------------- */
+/* ============================================================
+   5. CONTACT PAGE
+   ============================================================ */
 
 .contact-container {
   max-width: 800px;
@@ -548,759 +326,65 @@ li {
   z-index: 3;
 }
 
-.contact-container h2 {
-  text-align: center;
-  color: #ffffff;
-  margin-bottom: 20px;
-  text-shadow: 0 0 10px rgba(255,255,255,0.6);
-}
-
-.contact-container p {
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto 30px;
-  color: #ffffff;
-  opacity: 0.9;
-  line-height: 1.6;
-}
-
-/* FORM */
-form {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-form input,
-form textarea {
-  width: 100%;
-  font-size: 15px;
-  padding: 12px;
-  margin-bottom: 16px;
-  border-radius: 8px;
-  border: 1px solid rgba(255,255,255,0.35);
-  background: rgba(255,255,255,0.15);
-  color: #2b2b2b;
-  backdrop-filter: blur(4px);
-}
-
-form textarea {
-  min-height: 120px;
-  resize: vertical;
-}
-
-form button {
-  width: 100%;
-  padding: 12px;
-  font-size: 15px;
-  border-radius: 8px;
-  border: 1px solid rgba(255,255,255,0.45);
-  background: rgba(255,255,255,0.25);
-  color: #ffffff;
-  cursor: pointer;
-  transition: 0.25s ease;
-  backdrop-filter: blur(4px);
-}
-
-form button:hover {
-  background: rgba(255,255,255,0.35);
-  box-shadow: 0 0 10px rgba(255,255,255,0.4);
-}
-
-/* ---------------------------------------- */
-/* CONTACT PAGE — MOBILE TUNING             */
-/* ---------------------------------------- */
-
-@media (max-width: 600px) {
-
-  form {
-    padding: 0 18px;
-  }
-
-  form input,
-  form textarea {
-    padding: 12px;
-    margin-bottom: 16px;
-  }
-
-  form button {
-    padding: 12px;
-    margin-top: 8px;
-  }
-}
-/* -------------------------------------------------- */
-/* BOOKING PAGE — CATEGORY HEADERS                     */
-/* -------------------------------------------------- */
-
-.category-header {
-  max-width: 900px;
-  margin: 60px auto 20px;
-  padding: 20px;
-  text-align: center;
-  color: #2b2b2b;
-  text-shadow: 0 0 10px rgba(255,255,255,0.6);
-  position: relative;
-  z-index: 3;
-}
-
-.category-header h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-.category-header p {
-  font-size: 1.1rem;
-  opacity: 0.9;
-  line-height: 1.6;
-}
-
-/* -------------------------------------------------- */
-/* BOOKING PAGE — SESSION CARDS                        */
-/* -------------------------------------------------- */
-
-.book-header h2{
-  text-align: center;
-}
-
-.book-header p {
-  text-align: center;
-}
+/* ============================================================
+   6. BOOKING PAGE
+   ============================================================ */
 
 .session-card {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: rgba(255,255,255,0.22);
-  border: 1px solid rgba(255,255,255,0.15);
   border-radius: 14px;
   padding: 20px;
   margin: 16px auto;
   max-width: 900px;
   backdrop-filter: blur(6px);
-  transition: 0.25s ease;
-  color: #2b2b2b;
 }
 
-.session-card:hover {
-  background: rgba(255,255,255,0.28);
-}
+/* ============================================================
+   7. FOOTER
+   ============================================================ */
 
-.session-card h4 {
-  margin: 0 0 6px;
-  font-size: 1.2rem;
-  color: #2b2b2b;
-}
-
-.session-card p {
-  margin: 0;
-  font-size: 1rem;
-  opacity: 0.85;
-  color: #2b2b2b;
-}
-
-/* Force white text inside booking categories */
-.booking-category .category-body .session-card,
-.booking-category .category-body .session-card h4,
-.booking-category .category-body .session-card p {
-  color: #2b2b2b !important;
-}
-
-/* -------------------------------------------------- */
-/* BOOKING PAGE — BUTTONS                              */
-/* -------------------------------------------------- */
-
-.session-btn {
-  padding: 10px 20px;
-  background: rgba(255,255,255,0.25);
-  border: 1px solid rgba(255,255,255,0.45);
-  border-radius: 8px;
-  color: #2b2b2b;
-  cursor: pointer;
-  transition: 0.25s ease;
-  backdrop-filter: blur(4px);
-  font-size: 1rem;
-  text-decoration: none;
-}
-
-.session-btn:hover {
-  background: rgba(255,255,255,0.35);
-  box-shadow: 0 0 10px rgba(255,255,255,0.4);
-}
-
-/* -------------------------------------------------- */
-/* BOOKING PAGE — MODAL                                */
-/* -------------------------------------------------- */
-
-.session-modal {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.22);
-  backdrop-filter: blur(4px);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 20;
-}
-
-.session-modal.active {
-  display: flex;
-}
-
-.modal-content {
-  background: rgba(255,255,255,0.22);
-  border: 1px solid rgba(255,255,255,0.15);
-  border-radius: 16px;
-  padding: 30px;
-  width: 500px;
-  max-width: 90%;
-  backdrop-filter: blur(8px);
-  color: #2b2b2b;
-  position: relative;
-}
-
-.modal-content h3 {
-  margin-top: 0;
-  color: #2b2b2b;
-}
-
-.modal-content p {
-  color: #2b2b2b;
-  opacity: 0.85;
-  line-height: 1.6;
-}
-
-.modal-close {
-  position: absolute;
-  top: 12px;
-  right: 14px;
-  font-size: 1.4rem;
-  cursor: pointer;
-  color: #ffffff;
-  opacity: 0.8;
-  transition: 0.2s ease;
-}
-
-.modal-close:hover {
-  opacity: 1;
-}
-
-/* -------------------------------------------------- */
-/* BOOKING PAGE — MOBILE TUNING                        */
-/* -------------------------------------------------- */
-
-@media (max-width: 600px) {
-
-  .category-header {
-    padding: 18px;
-  }
-
-  .session-card {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-    padding: 18px;
-  }
-
-  .session-btn {
-    align-self: flex-start;
-    padding: 8px 16px;
-    font-size: 14px;
-  }
-
-  .modal-content {
-    width: 92%;
-    padding: 24px 18px;
-    margin: 20px auto;
-  }
-}
-/* -------------------------------------------------- */
-/* FOOTER                                              */
-/* -------------------------------------------------- */
-
-footer,
-.footer,
-.site-footer {
+footer {
   text-align: center;
   padding: 20px 0;
   color: #ffffff;
-  font-size: 0.9rem;
   opacity: 0.7;
   margin-top: 60px;
   position: relative;
   z-index: 3;
 }
 
-/* Footer links (if any appear later) */
-footer a,
-.footer a,
-.site-footer a {
-  color: #ffffff;
-  text-decoration: underline;
-  opacity: 0.85;
-  transition: 0.2s ease;
-}
-
-footer a:hover,
-.footer a:hover,
-.site-footer a:hover {
-  opacity: 1;
-}
-
-/* ---------------------------------------- */
-/* FOOTER — MOBILE TUNING                   */
-/* ---------------------------------------- */
+/* ============================================================
+   8. GLOBAL MOBILE TUNING
+   ============================================================ */
 
 @media (max-width: 600px) {
-  footer,
-  .footer,
-  .site-footer {
-    padding: 24px 12px;
-    font-size: 13px;
-    color: rgba(255,255,255,0.55) !important;
-    text-align: center;
-  }
-}
-/* -------------------------------------------------- */
-/* ANIMATIONS — GLOBAL                                 */
-/* -------------------------------------------------- */
-
-/* Twinkling starfield */
-@keyframes twinkle {
-  0%   { opacity: 0.2; transform: scale(1); }
-  50%  { opacity: 0.6; transform: scale(1.02); }
-  100% { opacity: 0.3; transform: scale(0.98); }
-}
-
-/* Large glowing stars */
-@keyframes glowpulse {
-  0%   { opacity: 0.25; transform: scale(1); }
-  50%  { opacity: 0.55; transform: scale(1.03); }
-  100% { opacity: 0.35; transform: scale(0.97); }
-}
-
-/* Aurora movement */
-@keyframes auroraFlow {
-  0%   { transform: translateY(0) translateX(0) scale(1); }
-  50%  { transform: translateY(-40px) translateX(25px) scale(1.08); }
-  100% { transform: translateY(10px) translateX(-10px) scale(0.98); }
-}
-
-/* Iridescent shimmer */
-@keyframes iridescentShift {
-  0%   { background-position: 0% 50%; }
-  50%  { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* Shooting star */
-@keyframes shoot {
-  0%   { transform: translate(0,0) scale(1); opacity: 1; }
-  70%  { transform: translate(600px,300px) scale(0.8); opacity: 0.9; }
-  100% { transform: translate(900px,450px) scale(0.2); opacity: 0; }
-}
-
-/* Cloud drift */
-@keyframes drift {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-300px); }
-}
-
-/* Deep star drift */
-@keyframes deepStars {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-80px); }
-}
-/* -------------------------------------------------- */
-/* GLOBAL MOBILE TUNING — applies to all pages         */
-/* -------------------------------------------------- */
-
-@media (max-width: 600px) {
-
-  /* Global text adjustments */
-  p,
-  li {
+  p, li {
     font-size: 1rem;
     line-height: 1.55;
   }
 
-  h1 {
-    font-size: 2.2rem;
-  }
-
-  h2 {
-    font-size: 1.7rem;
-  }
-
-  h3 {
-    font-size: 1.35rem;
-  }
-
-  /* Navigation */
   .nav {
     flex-wrap: wrap;
     gap: 14px;
-    padding: 16px 0;
   }
 
-  .nav a {
-    font-size: 0.95rem;
-    padding: 6px 10px;
-  }
-
-  /* Hero */
-  .hero {
-    padding: 60px 16px 30px;
-  }
-
-  .hero h1 {
-    font-size: 2.2rem;
-  }
-
-  .hero p {
-    font-size: 1.05rem;
-  }
-
-  /* Intro */
-  .intro-section {
-    padding: 16px;
-    margin: 30px auto;
-  }
-
-  /* Reviews */
-  .reviews-section {
-    padding: 20px 16px;
-    margin: 40px auto;
-  }
-
-  .review-card {
-    padding: 16px;
-  }
-
-  .reviews-more {
-    padding: 14px 16px;
-  }
-
-  /* CTA */
-  .cta {
-    padding: 40px 16px;
-    margin-bottom: 60px;
-  }
-
-  .primary-button {
-    padding: 12px 24px;
-    font-size: 1rem;
-  }
-
-  /* About page handled in its own block above */
-
-  /* Contact page handled in its own block above */
-
-  /* Booking page handled in its own block above */
-
-  /* Footer handled in its own block above */
-}
-
-/* -------------------------------------------------- */
-/* INDEX — SIDE-BY-SIDE PHOTO + TEXT (FORCED LAYOUT)   */
-/* -------------------------------------------------- */
-
-.index-pair {
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-  max-width: 1000px;
-  margin: 80px auto;
-  padding: 0 20px;
-  position: relative;
-  z-index: 3;
-}
-
-.intro-image img {
-  width: 280px !important;   /* smaller photo */
-  max-width: 100%;
-  border-radius: 14px;
-  box-shadow: 0 0 18px rgba(255,255,255,0.12);
-}
-
-.intro-text {
-  max-width: 500px;
-  background: rgba(0,0,0,0.35);
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 16px;
-  padding: 24px;
-  backdrop-filter: blur(6px);
-}
-
-.intro-text p {
-  color: #ffffff;
-  font-size: 1.2rem;
-  line-height: 1.6;
-  opacity: 0.9;
-}
-
-/* Mobile */
-@media (max-width: 600px) {
-  .index-pair {
-    flex-direction: column !important;
-    gap: 24px;
-    margin: 40px auto;
-  }
-
-  .intro-image img {
-    width: 100% !important;
-  }
-
-  .intro-text {
-    padding: 20px 16px;
+  .reviews-grid {
+    grid-template-columns: 1fr;
   }
 }
 
-/* -------------------------------------------------- */
-/* FLOATING QUOTE — BIG, CENTERED, HERO MOMENT        */
-/* -------------------------------------------------- */
+/* ============================================================
+   9. ANIMATIONS
+   ============================================================ */
 
-.floating-quote {
-  text-align: center;
-  max-width: 900px;
-  margin: 100px auto 80px;
-  padding: 0 20px;
-  position: relative;
-  z-index: 3;
-}
+@keyframes twinkle { ... }
+@keyframes glowpulse { ... }
+@keyframes auroraFlow { ... }
+@keyframes iridescentShift { ... }
+@keyframes shoot { ... }
+@keyframes drift { ... }
+@keyframes deepStars { ... }
 
-.floating-quote-text {
-  font-size: 2rem;                 /* bigger */
-  line-height: 1.4;
-  font-weight: 300;                /* softer, more quote-like */
-  color: #2b2b2b;
-  opacity: 0.95;
-  text-shadow:
-    0 0 12px rgba(255,255,255,0.6),
-    0 0 20px rgba(255,255,255,0.4);
-  max-width: 800px;
-  margin: 0 auto;
-  letter-spacing: 0.3px;
-}
-
-/* Optional: add quote marks automatically */
-.floating-quote-text::before {
-  content: "“";
-  font-size: 2.4rem;
-  opacity: 0.6;
-  vertical-align: top;
-}
-
-.floating-quote-text::after {
-  content: "”";
-  font-size: 2.4rem;
-  opacity: 0.6;
-  vertical-align: bottom;
-}
-
-/* Mobile */
-@media (max-width: 600px) {
-  .floating-quote-text {
-    font-size: 1.5rem;
-    line-height: 1.45;
-  }
-}
-
-.booking-category {
-  margin-bottom: 20px;
-  border-radius: 12px;
-  overflow: hidden;
-  background: rgba(255,255,255,0.35);
-  backdrop-filter: blur(6px);
-  border: 1px solid rgba(0,0,0,0.1);
-}
-
-/* Header (clickable) */
-.category-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 16px 20px;
-  cursor: pointer;
-  color: #2b2b2b;
-}
-
-.category-header h3 {
-  margin: 0;
-  font-size: 1.2rem;
-  font-weight: 600;
-}
-
-/* Chevron rotation */
-.category-header .chevron {
-  transition: transform 0.3s ease;
-}
-
-.category-header.open .chevron {
-  transform: rotate(90deg);
-}
-
-/* Body (hidden by default) */
-.category-body {
-  display: none;
-  padding: 16px 20px;
-}
-
-.category-body.open {
-  display: block;
-}
-
-.acuity-calendar iframe {
-  border-radius: 16px;
-  box-shadow: 0 0 30px rgba(255,255,255,0.15);
-  backdrop-filter: blur(6px);
-}
-
-/* ================================
-   ABOUT PAGE — MASTER GRID LAYOUT
-   ================================ */
-
-.about-wrapper {
-  position: relative;
-  z-index: 10; /* keeps content above sky layers */
-  padding: 60px 20px;
-  display: flex;
-  justify-content: center;
-}
-
-.about-inner {
-  display: grid !important;
-  grid-template-columns: 40% 60% !important;
-  grid-template-rows: auto auto;
-  gap: 30px;
-  width: 100%;
-  max-width: 1100px;
-}
-
-/* LEFT COLUMN — PHOTO */
-.about-photo {
-  grid-column: 1;
-  grid-row: 1;
-}
-
-.about-photo img {
-  width: 100%;
-  border-radius: 12px;
-  display: block;
-}
-
-/* RIGHT COLUMN — INTRO BOX */
-.about-intro {
-  grid-column: 2;
-  grid-row: 1;
-  background: rgba(0,0,0,0.45);
-  backdrop-filter: blur(6px);
-  padding: 25px;
-  border-radius: 14px;
-  color: #fff;
-}
-
-/* BOTTOM BOX — SPANS BOTH COLUMNS */
-.about-bottom {
-  grid-column: 1 / 3;
-  grid-row: 2;
-  background: rgba(0,0,0,0.45);
-  backdrop-filter: blur(6px);
-  padding: 40px 25px;
-  border-radius: 14px;
-  color: #fff;
-}
-
-/* FORCE EQUAL HEIGHT COLUMNS + BOTTOM ALIGNMENT ON MOBILE */
-@media (max-width: 768px) {
-
-  /* Make both columns stretch to the same height */
-  .about-inner {
-    align-items: stretch !important;
-  }
-
-  /* Make the photo column fill the full height of the row */
-  .about-photo {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end; /* pushes image to the bottom */
-    height: 100%;
-  }
-
-  /* Keep the image natural */
-  .about-photo img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-}
-
-/* HIDE MOON ON CONTACT + BOOKING PAGES */
-.Contact-page .moon,
-.booking-page .moon {
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 1.2s ease-in-out;
-}
-
-/* FINAL FIX — FORCE ABOUT PAGE TO ONE COLUMN ON MOBILE */
-@media (max-width: 768px) {
-
-  .about-inner {
-    display: grid !important;
-    grid-template-columns: 1fr !important;   /* ONE column */
-    grid-auto-rows: auto !important;
-    gap: 24px !important;
-  }
-
-  .about-photo {
-    grid-column: 1 !important;
-    grid-row: 1 !important;
-  }
-
-  .about-intro {
-    grid-column: 1 !important;
-    grid-row: 2 !important;
-  }
-
-  .about-bottom {
-    grid-column: 1 !important;
-    grid-row: 3 !important;
-  }
-
-  .about-photo img {
-    width: 100%;
-    max-width: 300px;   /* adjust size here */
-    margin: 0 auto;
-    display: block;
-  }
-  
-/* ABOUT PAGE — FINAL MOBILE OVERRIDE */
-@media (max-width: 768px) {
-
-  /* Kill ALL grid behavior on this page only */
-  .about-page .about-inner {
-    display: block !important;
-    grid-template-columns: none !important;
-    grid-template-rows: none !important;
-    gap: 0 !important;
-    width: 100% !important;
-  }
-
-  /* Stack each section */
-  .about-page .about-photo,
-  .about-page .about-intro,
-  .about-page .about-bottom {
-    width: 100% !important;
-    display: block !important;
-    margin-bottom: 30px;
-  }
-
-  /* Keep the photo small and centered */
-  .about-page .about-photo img {
-    width: 100%;
-    max-width: 300px;
-    margin: 0 auto;
-    display: block;
-  }
-}
