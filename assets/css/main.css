@@ -1229,3 +1229,24 @@ footer a:hover,
   pointer-events: none;
   transition: opacity 1.2s ease-in-out;
 }
+
+/* MOBILE ABOUT PAGE — STACK EVERYTHING LIKE HOMEPAGE */
+@media (max-width: 768px) {
+
+  .about-inner {
+    display: block !important;   /* turn off the grid */
+  }
+
+  .about-photo,
+  .about-intro,
+  .about-bottom {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .about-photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
