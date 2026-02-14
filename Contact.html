@@ -9,20 +9,18 @@
 
 <body>
 
-  <!-- SKY LAYERS -->
-  <div class="aurora-layer"></div>
+  <!-- SKY LAYERS (minimal version) -->
   <div class="clouds"></div>
   <div class="constellations"></div>
   <div class="shooting-star"></div>
   <div class="moon"></div>
-  <div class="shimmer-layer"></div>
 
   <!-- NAVIGATION -->
   <header>
     <nav class="nav">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <a href="Contact.html">Contact</a>
+      <a href="Contact.html" class="active">Contact</a>
       <a href="book.html">Book a Session</a>
     </nav>
   </header>
@@ -30,24 +28,29 @@
   <!-- PAGE DIVIDER -->
   <div class="page-divider"></div>
 
-  <!-- CONTACT SECTION -->
-  <div class="contact-container">
-    <h1>Reach out — I’d love to hear from you.</h1>
+  <!-- PAGE CONTENT WRAPPER (fixes collapse) -->
+  <main class="page-content">
 
-    <form action="https://formsubmit.co/spicyspiritualservices@gmail.com" method="POST">
+    <!-- CONTACT SECTION -->
+    <div class="contact-container">
+      <h1>Reach out — I’d love to hear from you.</h1>
 
-      <!-- FormSubmit settings -->
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_subject" value="New message from your website">
+      <form action="https://formsubmit.co/spicyspiritualservices@gmail.com" method="POST">
 
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" required></textarea>
+        <!-- FormSubmit settings -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_subject" value="New message from your website">
 
-      <button type="submit" class="primary-button">Send Message</button>
-    </form>
-  </div>
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+
+        <button type="submit" class="primary-button">Send Message</button>
+      </form>
+    </div>
+
+  </main>
 
   <!-- FOOTER -->
   <footer class="site-footer">
@@ -55,6 +58,4 @@
   </footer>
 
 </body>
-</html>
-
 </html>
