@@ -70,62 +70,6 @@ html::after {
   opacity: 0.04;
 }
 
-.shooting-star {
-  position: fixed;
-  top: -20px;
-  left: -20px;
-  width: 4px;
-  height: 4px;
-  background: white;
-  border-radius: 50%;
-  box-shadow: 0 0 12px 6px rgba(255,255,255,0.8);
-  animation: shoot 4s linear infinite;
-  z-index: 2;
-}
-
-.clouds {
-  position: fixed;
-  inset: 0;
-  background:
-    radial-gradient(circle at 30% 40%, rgba(255,255,255,0.15), rgba(0,0,0,0.4)),
-    radial-gradient(circle at 70% 60%, rgba(255,255,255,0.1), rgba(0,0,0,0.5));
-  filter: blur(5px);
-  opacity: 0.06;
-  animation: drift 60s linear infinite;
-  z-index: 0;
-  pointer-events: none;
-}
-
-.constellations {
-  position: fixed;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-  background:
-    radial-gradient(circle at 10% 20%, rgba(255,255,255,1) 3px, transparent 4px),
-    radial-gradient(circle at 30% 70%, rgba(255,255,255,0.9) 3px, transparent 4px),
-    radial-gradient(circle at 60% 40%, rgba(255,255,255,0.95) 3px, transparent 4px),
-    radial-gradient(circle at 80% 80%, rgba(255,255,255,0.85) 3px, transparent 4px),
-    radial-gradient(circle at 50% 90%, rgba(255,255,255,0.9) 3px, transparent 4px),
-    radial-gradient(circle at 90% 30%, rgba(255,255,255,0.95) 3px, transparent 4px);
-  opacity: 0.9;
-  filter: drop-shadow(0 0 4px rgba(255,255,255,0.6));
-}
-
-.moon {
-  position: fixed;
-  top: 8%;
-  right: 6%;
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  background: radial-gradient(circle at 30% 30%, white 40%, rgba(255,255,255,0) 70%);
-  box-shadow: 0 0 40px rgba(255,255,255,0.4);
-  filter: blur(1px);
-  pointer-events: none;
-  z-index: 3;
-}
-
 .nav {
   display: flex;
   justify-content: center;
@@ -171,6 +115,13 @@ html::after {
   max-width: 700px;
   margin: 0 auto 30px;
   opacity: 0.95;
+}
+
+.intro-image img {
+  width: 100%;
+  max-width: 240px;
+  margin: 0 auto;
+  display: block;
 }
 
 .intro-section {
@@ -254,10 +205,6 @@ html::after {
 }
 
 .about-inner {
-  display: grid;
-  grid-template-columns: 40% 60%;
-  grid-template-rows: auto auto;
-  gap: 30px;
   width: 100%;
   max-width: 1100px;
 }
@@ -268,37 +215,19 @@ html::after {
   display: block;
 }
 
-.about-intro {
+.about-intro,
+.about-bottom {
   background: rgba(0,0,0,0.45);
   backdrop-filter: blur(6px);
   padding: 25px;
   border-radius: 14px;
   opacity: 0.95;
-}
-
-.about-bottom {
-  grid-column: 1 / 3;
-  background: rgba(0,0,0,0.45);
-  backdrop-filter: blur(6px);
-  padding: 40px 25px;
-  border-radius: 14px;
-  opacity: 0.95;
+  margin-top: 30px;
 }
 
 @media (max-width: 768px) {
-  .about-page .about-inner {
+  .about-inner {
     display: block;
-    width: 100%;
-  }
-  .about-page .about-photo,
-  .about-page .about-intro,
-  .about-page .about-bottom {
-    width: 100%;
-    margin-bottom: 30px;
-  }
-  .about-page .about-photo img {
-    max-width: 300px;
-    margin: 0 auto;
   }
 }
 
@@ -310,19 +239,73 @@ html::after {
   z-index: 3;
 }
 
+.contact-container form {
+  display: block;
+}
+
+.contact-container input,
+.contact-container textarea {
+  width: 100%;
+  display: block;
+  margin-bottom: 18px;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+}
+
 .contact-container p {
   opacity: 0.95;
 }
 
-.session-card {
+.booking-grid {
+  max-width: 900px;
+  margin: 60px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  padding: 0 20px;
+}
+
+@media (max-width: 700px) {
+  .booking-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.booking-category {
+  background: rgba(255,255,255,0.35);
+  backdrop-filter: blur(6px);
+  border-radius: 16px;
+  padding: 20px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.booking-category:hover {
+  background: rgba(255,255,255,0.45);
+  box-shadow: 0 0 12px rgba(255,255,255,0.35);
+}
+
+.category-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.category-body {
+  display: none;
+  padding-top: 16px;
+}
+
+.booking-category.open .category-body {
+  display: block;
+}
+
+.session-card {
   background: rgba(255,255,255,0.22);
   border-radius: 14px;
   padding: 20px;
-  margin: 16px auto;
-  max-width: 900px;
+  margin: 16px 0;
   backdrop-filter: blur(6px);
   color: #2b2b2b;
 }
@@ -379,18 +362,3 @@ footer {
   100% { background-position: 0% 50%; }
 }
 
-@keyframes shoot {
-  0% { transform: translate(0,0) scale(1); opacity: 1; }
-  70% { transform: translate(600px,300px) scale(0.8); opacity: 0.9; }
-  100% { transform: translate(900px,450px) scale(0.2); opacity: 0; }
-}
-
-@keyframes drift {
-  from { transform: translateX(0); }
-  to { transform: translateX(-300px); }
-}
-
-@keyframes deepStars {
-  from { transform: translateX(0); }
-  to { transform: translateX(-80px); }
-}
