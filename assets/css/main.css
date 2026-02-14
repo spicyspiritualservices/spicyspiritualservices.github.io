@@ -1223,9 +1223,9 @@ footer a:hover,
 }
 
 /* HIDE MOON ON CONTACT + BOOKING PAGES */
-.contact-page .moon,
+.Contact-page .moon,
 .booking-page .moon {
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.6s ease-in-out;
+  transition: opacity 1.2s ease-in-out;
 }
