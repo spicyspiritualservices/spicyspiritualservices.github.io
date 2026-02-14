@@ -330,6 +330,23 @@ footer {
     margin-bottom: 20px;
   }
 }
+
+@media (min-width: 900px) { 
+  .about-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: 40px;
+  }
+
+  .about-photo { 
+    grid-column: 1;
+  }
+
+  .about-bottom { 
+    grid-column: 2;
+  }
+}
 /* ===================================== */
 /* 6. CONTACT PAGE ONLY                  */
 /* ===================================== */
