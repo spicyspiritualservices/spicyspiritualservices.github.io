@@ -1250,3 +1250,29 @@ footer a:hover,
     display: block;
   }
 }
+
+/* MOBILE ABOUT PAGE — STACKED LAYOUT WITH SMALLER PHOTO */
+@media (max-width: 768px) {
+
+  /* Turn off the grid so everything stacks */
+  .about-inner {
+    display: block !important;
+  }
+
+  /* Each section becomes full width */
+  .about-photo,
+  .about-intro,
+  .about-bottom {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  /* Keep the photo smaller and elegant */
+  .about-photo img {
+    width: 100%;
+    max-width: 320px;   /* controls how big the photo gets */
+    margin: 0 auto;     /* centers the photo */
+    display: block;
+    border-radius: 12px;
+  }
+}
