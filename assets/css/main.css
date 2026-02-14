@@ -369,6 +369,12 @@ footer {
 .contact-container p {
   opacity: 0.95;
 }
+
+.page-content { 
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
 /* ===================================== */
 /* 7. BOOK A SESSION PAGE ONLY           */
 /* ===================================== */
