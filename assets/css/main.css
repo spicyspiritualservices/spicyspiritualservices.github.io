@@ -1191,13 +1191,6 @@ footer a:hover,
   color: #fff;
 }
 
-/* KEEP TWO COLUMNS ON MOBILE */
-@media (max-width: 768px) {
-  .about-inner {
-    grid-template-columns: 1fr 1fr !important;
-  }
-}
-
 /* FORCE EQUAL HEIGHT COLUMNS + BOTTOM ALIGNMENT ON MOBILE */
 @media (max-width: 768px) {
 
@@ -1230,53 +1223,25 @@ footer a:hover,
   transition: opacity 1.2s ease-in-out;
 }
 
-/* MOBILE ABOUT PAGE — STACK EVERYTHING LIKE HOMEPAGE */
+/* MOBILE ABOUT PAGE — STACKED LAYOUT WITH SMALLER PHOTO */
 @media (max-width: 768px) {
 
   .about-inner {
-    display: block !important;   /* turn off the grid */
+    display: block !important;
+    width: 100% !important;
   }
 
   .about-photo,
   .about-intro,
   .about-bottom {
-    width: 100%;
+    width: 100% !important;
     margin-bottom: 30px;
+    display: block !important;
   }
 
   .about-photo img {
     width: 100%;
-    height: auto;
-    display: block;
-  }
-}
-
-/* FINAL OVERRIDE — FORCE ABOUT PAGE TO STACK ON MOBILE */
-@media (max-width: 768px) {
-
-  /* Kill ALL grid behavior on the About page */
-  .about-wrapper,
-  .about-inner {
-    display: block !important;
-    grid-template-columns: none !important;
-    grid-template-rows: none !important;
-    gap: 0 !important;
-    width: 100% !important;
-  }
-
-  /* Make each section full-width and stacked */
-  .about-photo,
-  .about-intro,
-  .about-bottom {
-    width: 100% !important;
-    display: block !important;
-    margin-bottom: 30px;
-  }
-
-  /* Keep the photo smaller and centered */
-  .about-photo img {
-    width: 100%;
-    max-width: 300px;   /* adjust this number to taste */
+    max-width: 300px;  /* adjust size here */
     margin: 0 auto;
     display: block;
   }
