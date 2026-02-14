@@ -1,5 +1,5 @@
 // CATEGORY DROPDOWNS
-document.querySelectorAll(".session-btn").forEach(cat => {
+document.querySelectorAll(".booking-category").forEach(cat => {
   const header = cat.querySelector(".category-header");
   header.addEventListener("click", () => {
     cat.classList.toggle("open");
