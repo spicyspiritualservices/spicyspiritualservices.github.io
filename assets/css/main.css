@@ -1223,37 +1223,35 @@ footer a:hover,
   transition: opacity 1.2s ease-in-out;
 }
 
-* MOBILE ABOUT PAGE — STACK USING THE GRID ITSELF */
+/* FINAL FIX — FORCE ABOUT PAGE TO ONE COLUMN ON MOBILE */
 @media (max-width: 768px) {
 
   .about-inner {
     display: grid !important;
-    grid-template-columns: 1fr !important;   /* one column only */
-    grid-template-rows: auto auto auto;
-    gap: 24px;
-    width: 100% !important;
+    grid-template-columns: 1fr !important;   /* ONE column */
+    grid-auto-rows: auto !important;
+    gap: 24px !important;
   }
 
   .about-photo {
-    grid-column: 1;
-    grid-row: 1;
+    grid-column: 1 !important;
+    grid-row: 1 !important;
   }
 
   .about-intro {
-    grid-column: 1;
-    grid-row: 2;
+    grid-column: 1 !important;
+    grid-row: 2 !important;
   }
 
   .about-bottom {
-    grid-column: 1;
-    grid-row: 3;
+    grid-column: 1 !important;
+    grid-row: 3 !important;
   }
 
   .about-photo img {
     width: 100%;
-    max-width: 300px;   /* adjust smaller/bigger if you want */
+    max-width: 300px;   /* adjust size here */
     margin: 0 auto;
     display: block;
   }
 }
-
