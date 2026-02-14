@@ -267,6 +267,12 @@ footer {
 .cta p {
   opacity: 0.95;
 }
+
+.cta-button-wrapper {
+  text-align: center;
+  margin-top: 30px;
+}
+
 /* ===================================== */
 /* 5. ABOUT PAGE ONLY                    */
 /* ===================================== */
