@@ -94,6 +94,13 @@ const sessions = {
   },
 
   // MENTORSHIP
+  "mentorship-consultation": {
+  title: "Free Mentorship Consultation",
+  meta: "20 minutes • Free",
+  description: 
+    "A 20-minute call to explore where you are in your intuitive or spiritual journey, what you’re hoping to build, and whether mentorship is the right fit for you.",
+    
+},
   "mentorship-meditation": {
     title: "Meditation Mentorship",
     meta: "8 weeks • $155",
