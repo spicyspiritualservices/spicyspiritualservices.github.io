@@ -548,50 +548,28 @@ footer {
 }
 
 .mentorship-cta {
-  background: rgba(255, 255, 255, 0.05); /* soft translucent layer */
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  padding: 40px 25px;
-  border-radius: 14px;
-  text-align: center;
-  margin: 60px auto 40px;
-  max-width: 700px;
-  backdrop-filter: blur(6px);
-}
-
-.mentorship-cta {
   max-width: 650px;
-  margin: 60px auto; /* centers the box */
+  width: 90%;
+  margin: 50px auto; /* centers the box */
   padding: 40px 30px;
-  background-color: #ffffff10; /* soft translucent box */
-  border: 1px solid #ffffff25; 
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 14px;
   text-align: center;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+  display: block;
 }
 
 .mentorship-cta h2 {
-  font-size: 1.9rem;
   margin-bottom: 12px;
 }
 
 .mentorship-cta p {
-  font-size: 1.1rem;
-  line-height: 1.55;
   margin-bottom: 22px;
+  line-height: 1.5;
 }
 
-.mentorship-cta .cta-button {
+.mentorship-cta .primary-button {
   display: inline-block;
-  padding: 12px 28px;
-  border-radius: 8px;
-  background-color: var(--accent-color);
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  transition: transform 0.15s ease, opacity 0.2s ease;
-}
-
-.mentorship-cta .cta-button:hover {
-  transform: translateY(-2px);
-  opacity: 0.9;
+  margin-top: 10px;
 }
