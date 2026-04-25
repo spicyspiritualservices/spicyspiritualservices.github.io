@@ -592,5 +592,5 @@ footer {
 .booking-header-box h2,
 .booking-header-box .book-subtitle {
   text-align: center !important;
-  color: #000
+  color: #000 !important;
 }
