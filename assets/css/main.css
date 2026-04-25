@@ -306,7 +306,7 @@ footer {
 .about-intro {
   background: rgba(0,0,0,0.45);
   backdrop-filter: blur(6px);
-  padding: 25px;
+  padding: 18px 22px;
   border-radius: 14px;
   opacity: 0.95;
 }
