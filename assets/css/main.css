@@ -546,3 +546,40 @@ footer {
   max-width: 500px;
   width: 100%;
 }
+
+.mentorship-cta {
+  background: rgba(255, 255, 255, 0.05); /* soft translucent layer */
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 40px 25px;
+  border-radius: 14px;
+  text-align: center;
+  margin: 60px auto 40px;
+  max-width: 700px;
+  backdrop-filter: blur(6px);
+}
+
+.mentorship-cta h2 {
+  font-size: 1.9rem;
+  margin-bottom: 10px;
+}
+
+.mentorship-cta p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.mentorship-cta .cta-button {
+  display: inline-block;
+  padding: 12px 26px;
+  border-radius: 8px;
+  background-color: var(--accent-color); /* your existing button color */
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+}
+
+.mentorship-cta .cta-button:hover {
+  opacity: 0.85;
+}
