@@ -119,9 +119,9 @@ const sessions = {
     description:
       "Learn to read Tarot intuitively, symbolically, and confidently.",
   },
-  "mentorship-spiritual-beginner": {
-    title: "Spiritual Beginner Mentorship",
-    meta: "5 months • $688",
+  "mentorship-spiritual": {
+    title: "Spiritual  Mentorship",
+    meta: "4 weeks • $300",
     description:
       "A grounded introduction to intuition, energy, and spiritual safety.",
   },
@@ -151,12 +151,6 @@ const sessions = {
   },
 
   // PRACTICE CIRCLES
-  "circle-reiki": {
-    title: "Reiki Practice Circle",
-    meta: "Fridays • 8 PM EST • $15",
-    description:
-      "A supportive space to practice giving and receiving Reiki.",
-  },
   "circle-tarot": {
     title: "Tarot Practice Circle",
     meta: "Tuesdays • 8 PM EST • $15",
