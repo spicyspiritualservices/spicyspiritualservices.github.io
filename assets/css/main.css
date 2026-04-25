@@ -593,3 +593,7 @@ footer {
   text-align: center !important;
   color: #000 !important;
 }
+
+html, body {
+  overflow-x: hidden !important;
+}
