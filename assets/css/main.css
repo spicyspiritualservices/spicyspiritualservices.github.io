@@ -574,3 +574,23 @@ footer {
   display: inline-block;
   margin-top: 10px;
 }
+
+.booking-header-box {
+  max-width: 700px;
+  margin: 40px auto 50px;
+  padding: 35px 30px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+}
+
+.booking-header-box h2 {
+  margin-bottom: 12px;
+}
+
+.booking-header-box .book-subtitle {
+  line-height: 1.5;
+  margin-top: 8px;
+}
