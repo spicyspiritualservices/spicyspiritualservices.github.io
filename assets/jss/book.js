@@ -150,6 +150,11 @@ const sessions = {
       "A tender journey into healing younger selves and restoring wholeness.",
   },
 
+  "workshop-spiritual-foundations": {
+  title: "Spiritual Foundations Workshop",
+  meta: "3‑Day Intensive • $180",
+  description: "A deep, experiential 3‑day workshop covering the seven pillars of spiritual foundations: awareness, discernment, regulation, boundaries, connection, meaning-making, and practice. Designed to help you build a grounded, sustainable relationship with your intuition."
+},
   // PRACTICE CIRCLES
   "circle-tarot": {
     title: "Tarot Practice Circle",
