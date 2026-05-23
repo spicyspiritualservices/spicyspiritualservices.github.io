@@ -156,18 +156,18 @@ const sessions = {
   description: "A deep, experiential 3‑day workshop covering the seven pillars of spiritual foundations: awareness, discernment, regulation, boundaries, connection, meaning-making, and practice. Designed to help you build a grounded, sustainable relationship with your intuition."
 },
   // PRACTICE CIRCLES
-  "circle-tarot": {
-    title: "Tarot Practice Circle",
-    meta: "Tuesdays • 8 PM EST • $15",
-    description:
-      "A guided circle for practicing Tarot in a safe environment.",
   },
   "circle-spiritual-dev": {
     title: "Spiritual Development Circle",
     meta: "Mondays • 8 PM EST • $15",
     description:
       "A community space for intuitive development and psychic exercises.",
-  }
+  },
+    "circle-tarot": {
+    title: "Tarot Practice Circle",
+    meta: "Tuesdays • 8 PM EST • $15",
+    description:
+      "A guided circle for practicing Tarot in a safe environment.",
 };
 
 // MODAL
