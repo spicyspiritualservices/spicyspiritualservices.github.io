@@ -137,7 +137,6 @@ html::after {
   max-width: 700px;
   margin: 0 auto 30px;
   opacity: 0.95;
-  text-align: center;
 }
 
 footer {
@@ -620,7 +619,7 @@ html, body {
   font-weight: 600;
   text-decoration: none;
   transition: 0.2s ease;
-  text-align: center;
+  width: fit-content;
 }
 
 .discord-cta:hover {
