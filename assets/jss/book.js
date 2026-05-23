@@ -167,6 +167,7 @@ const sessions = {
     meta: "Tuesdays • 8 PM EST • $15",
     description:
       "A guided circle for practicing Tarot in a safe environment.",
+    }
 };
 
 // MODAL
