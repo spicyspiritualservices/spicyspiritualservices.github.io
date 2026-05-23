@@ -608,3 +608,19 @@ footer {
 html, body {
   overflow-x: hidden !important;
 }
+
+.discord-cta {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 22px;
+  background: #5865F2;
+  color: white;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.discord-cta:hover {
+  background: #4752C4;
+}
