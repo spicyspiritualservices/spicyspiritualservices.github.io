@@ -610,7 +610,7 @@ html, body {
 }
 
 .discord-cta {
-  display: flex;
+  display: inline-block;
   justify-content: center;
   margin: 20px auto 0;
   padding: 12px 22px;
@@ -621,7 +621,9 @@ html, body {
   text-decoration: none;
   transition: 0.2s ease;
   width: fit-content;
-  text-align: center;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .discord-cta:hover {
