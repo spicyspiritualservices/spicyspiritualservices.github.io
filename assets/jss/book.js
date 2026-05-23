@@ -53,6 +53,14 @@ const sessions = {
       "A loving connection with pets who have crossed over.",
   },
 
+  //PAST LIFE READING
+  "past-life-reading": {
+  title: "Past Life Reading",
+  meta: "45 minutes • $65",
+  description:
+    "A deep intuitive exploration into the emotional residues, patterns, and soul imprints carried from previous lifetimes into this one.",
+},
+
   // REIKI
   "reiki-quick": {
     title: "Quick Boost Reiki",
