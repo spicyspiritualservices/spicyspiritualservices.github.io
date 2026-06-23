@@ -169,13 +169,7 @@ const sessions = {
     meta: "Mondays • 8 PM EST • $15",
     description:
       "A community space for intuitive development and psychic exercises.",
-  },
-    "circle-tarot": {
-    title: "Tarot Practice Circle",
-    meta: "Tuesdays • 8 PM EST • $15",
-    description:
-      "A guided circle for practicing Tarot in a safe environment.",
-    }
+  }
 };
 
 // MODAL
