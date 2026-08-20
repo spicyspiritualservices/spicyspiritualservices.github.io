@@ -10,25 +10,25 @@ document.querySelectorAll(".booking-category").forEach(cat => {
 const sessions = {
   "psychism-general": {
     title: "General Psychic Reading",
-    meta: "45 minutes • $55",
+    meta: "45 minutes • $85",
     description:
       "A spacious, intuitive reading where we tune into the energetic threads moving through your life right now.",
   },
   "psychism-pet": {
     title: "Pet Psychic Reading",
-    meta: "45 minutes • $55",
+    meta: "45 minutes • $85",
     description:
       "A heart‑centered connection with your animal’s soul and emotional world.",
   },
   "psychism-one-topic": {
     title: "One Topic Psychic Reading",
-    meta: "45 minutes • $45",
+    meta: "45 minutes • $70",
     description:
       "A focused reading on one specific area of your life for deep clarity.",
   },
   "psychism-guide": {
     title: "Guide Reading",
-    meta: "35 minutes • $55",
+    meta: "35 minutes • $99",
     description:
       "A channeled connection with your spiritual team for guidance and clarity.",
   },
@@ -36,19 +36,19 @@ const sessions = {
   // MEDIUMSHIP
   "mediumship-direct": {
     title: "Direct Mediumship",
-    meta: "60 minutes • $55",
+    meta: "60 minutes • $90",
     description:
       "A focused connection with a specific loved one in Spirit.",
   },
   "mediumship-spirit-led": {
     title: "Spirit‑Led Mediumship",
-    meta: "90 minutes • $75",
+    meta: "90 minutes • $120",
     description:
       "Spirit chooses who steps forward with the most aligned message.",
   },
   "mediumship-pet": {
     title: "Pet Mediumship",
-    meta: "45 minutes • $55",
+    meta: "45 minutes • $70",
     description:
       "A loving connection with pets who have crossed over.",
   },
@@ -56,7 +56,7 @@ const sessions = {
   //PAST LIFE READING
   "past-life-reading": {
   title: "Past Life Reading",
-  meta: "45 minutes • $65",
+  meta: "45 minutes • $85",
   description:
     "A deep intuitive exploration into the emotional residues, patterns, and soul imprints carried from previous lifetimes into this one.",
 },
@@ -78,25 +78,25 @@ const sessions = {
   // ASTROLOGY
   "astro-birth": {
     title: "Birth Chart Reading",
-    meta: "45 minutes • $70",
+    meta: "45 minutes • $90",
     description:
       "A deep dive into your soul blueprint, gifts, and purpose.",
   },
   "astro-transit": {
     title: "Transit Chart Reading",
-    meta: "30 minutes • $55",
+    meta: "30 minutes • $70",
     description:
       "Explore the cosmic weather moving through your life right now.",
   },
   "astro-progressed": {
     title: "Progressed Chart Reading",
-    meta: "30 minutes • $55",
+    meta: "30 minutes • $70",
     description:
       "Understand your current internal season and soul evolution.",
   },
   "astro-all-three": {
     title: "All Three Readings",
-    meta: "90 minutes • $110",
+    meta: "90 minutes • $125",
     description:
       "A full cosmic map of your soul, present moment, and unfolding path.",
   },
@@ -104,14 +104,14 @@ const sessions = {
   // MENTORSHIP
   "mentorship-consultation": {
   title: "Free Mentorship Consultation",
-  meta: "20 minutes • Free",
+  meta: "15 minutes • Free",
   description: 
-    "A 20-minute call to explore where you are in your intuitive or spiritual journey, what you’re hoping to build, and whether mentorship is the right fit for you.",
+    "A 15-minute call to explore where you are in your intuitive or spiritual journey, what you’re hoping to build, and whether mentorship is the right fit for you.",
     
 },
   "mentorship-meditation": {
     title: "Meditation Mentorship",
-    meta: "8 weeks • $155",
+    meta: "8 weeks • $300",
     description:
       "A guided journey into presence, grounding, and inner stillness.",
   },
@@ -123,7 +123,7 @@ const sessions = {
   },
   "mentorship-tarot": {
     title: "Tarot Mentorship",
-    meta: "8 weeks • $155",
+    meta: "8 weeks • $300",
     description:
       "Learn to read Tarot intuitively, symbolically, and confidently.",
   },
@@ -135,25 +135,25 @@ const sessions = {
   },
   "mentorship-empath": {
     title: "Empath 101",
-    meta: "8 weeks • $155",
+    meta: "8 weeks • $300",
     description:
       "A mentorship for sensitive souls learning boundaries and regulation.",
   },
   "mentorship-angelology": {
     title: "Angelology Mentorship",
-    meta: "8 weeks • $155",
+    meta: "8 weeks • $300",
     description:
       "A devotional journey into angelic connection and communication.",
   },
   "mentorship-shadow": {
     title: "Shadow Work Mentorship",
-    meta: "8 weeks • $77",
+    meta: "8 weeks • $300",
     description:
       "A compassionate exploration of unconscious patterns and integration.",
   },
   "mentorship-inner-child": {
     title: "Inner Child Mentorship",
-    meta: "8 weeks • $155",
+    meta: "8 weeks • $300",
     description:
       "A tender journey into healing younger selves and restoring wholeness.",
   },
